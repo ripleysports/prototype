@@ -1,0 +1,6 @@
+//
+// Font size
+html {
+  font-size: 133%; /* Used if browser doesn't support calc() */
+  font-size: calc(1em + 0.4vw + 0.4vh + 0.2vmin);
+}

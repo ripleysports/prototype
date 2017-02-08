@@ -1,0 +1,107 @@
+//
+// Palette
+$hue-primary: 211;
+$hue-gray:    210;
+$hue-green:   162;
+$hue-yellow:  48;
+$hue-red:     0;
+$colors: (
+  "primary": (
+    lighten-5:      hsl($hue-primary, 41%, 93%),
+    lighten-4:      hsl($hue-primary, 40%, 80%),
+    lighten-3:      hsl($hue-primary, 41%, 68%),
+    lighten-2:      hsl($hue-primary, 41%, 55%),
+    lighten-1:      hsl($hue-primary, 57%, 42%),
+    base:           hsl($hue-primary, 100%, 29%),
+    darken-1:       hsl($hue-primary, 100%, 21%),
+    darken-2:       hsl($hue-primary, 100%, 13%),
+    darken-3:       hsl($hue-primary, 100%, 8%),
+    darken-4:       hsl($hue-primary, 100%, 5%)
+  ),
+  "gray": (
+    lighten-5:      hsl($hue-gray, 13%, 98%),
+    lighten-4:      hsl($hue-gray, 13%, 95%),
+    lighten-3:      hsl($hue-gray, 13%, 86%),
+    lighten-2:      hsl($hue-gray, 13%, 80%),
+    lighten-1:      hsl($hue-gray, 13%, 74%),
+    base:           hsl($hue-gray, 13%, 62%),
+    darken-1:       hsl($hue-gray, 13%, 46%),
+    darken-2:       hsl($hue-gray, 13%, 38%),
+    darken-3:       hsl($hue-gray, 13%, 26%),
+    darken-4:       hsl($hue-gray, 13%, 10%)
+  ),
+  "green": (
+    lighten-5:      hsl($hue-green, 66%, 94%),
+    lighten-4:      hsl($hue-green, 49%, 84%),
+    lighten-3:      hsl($hue-green, 69%, 73%),
+    lighten-2:      hsl($hue-green, 70%, 62%),
+    lighten-1:      hsl($hue-green, 70%, 52%),
+    base:           hsl($hue-green, 100%, 41%),
+    darken-1:       hsl($hue-green, 100%, 30%),
+    darken-2:       hsl($hue-green, 100%, 19%),
+    darken-3:       hsl($hue-green, 100%, 11%),
+    darken-4:       hsl($hue-green, 100%, 8%)
+  ),
+  "yellow": (
+    lighten-5:      hsl($hue-yellow, 91%, 95%),
+    lighten-4:      hsl($hue-yellow, 97%, 87%),
+    lighten-3:      hsl($hue-yellow, 98%, 79%),
+    lighten-2:      hsl($hue-yellow, 97%, 70%),
+    lighten-1:      hsl($hue-yellow, 98%, 62%),
+    base:           hsl($hue-yellow, 98%, 53%),
+    darken-1:       hsl($hue-yellow, 86%, 39%),
+    darken-2:       hsl($hue-yellow, 85%, 24%),
+    darken-3:       hsl($hue-yellow, 86%, 15%),
+    darken-4:       hsl($hue-yellow, 84%, 10%)
+  ),
+  "red": (
+    lighten-5:      hsl($hue-red, 100%, 97%),
+    lighten-4:      hsl($hue-red, 100%, 90%),
+    lighten-3:      hsl($hue-red, 100%, 84%),
+    lighten-2:      hsl($hue-red, 100%, 77%),
+    lighten-1:      hsl($hue-red, 100%, 71%),
+    base:           hsl($hue-red, 100%, 64%),
+    darken-1:       hsl($hue-red, 56%, 47%),
+    darken-2:       hsl($hue-red, 56%, 29%),
+    darken-3:       hsl($hue-red, 56%, 18%),
+    darken-4:       hsl($hue-red, 54%, 12%)
+  ),
+  "black":          hsl(0%, 0%, 0%),
+  "white":          hsl(100%, 100%, 100%),
+  "transparent":    transparent,
+  "none":           none,
+  "inherit":        inherit,
+  "currentcolor":   currentcolor
+);
+
+//
+// Type
+$serif: Georgia, Times, "Times New Roman", serif;
+$sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$type: (
+  0-75:   0.55rem,
+  1:      0.7rem,
+  1-25:   0.95rem,
+  1-5:    1.3rem,
+  1-75:   1.65rem,
+  2:      1.8rem
+);
+
+//
+// Media query
+$mq-points: (
+  xs: 320,
+  s: 612,
+  m: 768,
+  l: 980,
+  xl: 1200,
+  xl2: 1420,
+  xl3: 1600
+);
+
+//
+// Animation
+$animation-easing:        cubic-bezier(0.236, 0.000, 0.236, 1.000);
+$animation-time:          200ms;
+$animation-short-time:    $animation-time / 1.618;

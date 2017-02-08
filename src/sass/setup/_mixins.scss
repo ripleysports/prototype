@@ -1,0 +1,81 @@
+//
+// Media query mixin
+@mixin mq($point, $max: null) {
+  @if map-has-key($mq-points, $point) {
+    $point: map-get($mq-points, $point);
+    @if $max {
+      @media screen and (max-width:#{$point - 1}px) {
+        @content;
+      }
+    }
+    @else {
+      @media screen and (min-width:#{$point}px) {
+        @content;
+      }
+    }
+  }
+  @else  {
+    @error "No such breakpoint: `#{$point}`.";
+  }
+}
+
+//
+// Map class mixin
+@mixin map-to-class($map, $property, $selector, $divider: '') {
+  $selector: if($selector == '' and &, &, $selector);
+
+  #{$selector} {
+    @each $key, $value in $map {
+      $suffix: if($key == 'base', '', $divider + $key);
+      @at-root #{$selector}#{$suffix} {
+        @if type-of($value) == map {
+          @include map-to-class($value, $property, '', $divider) {
+            @content;
+          }
+        } @else {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+}
+
+//
+// Get color value from map
+@function color($color, $tone: 'base') {
+  @if type-of(map-get($colors, #{$color})) == map {
+    @return map-get(map-get($colors, #{$color}), $tone);
+  } @else {
+    @return map-get($colors, #{$color});
+  }
+}
+
+//
+// Get font-size from map
+@function font-size($key) {
+  @return map-get($type, $key);
+}
+
+//
+// Transition mixin (overwrite bourbon mixin)
+@mixin trans-prefix($value, $prefix: "") {
+  $slice: str-slice(inspect($value), 0, 9);
+  @if $slice == "transform" {
+    #{$prefix}transition: #{$prefix}#{$value};
+  } @else {
+    #{$prefix}transition: $value;
+  }
+}
+@mixin transition($properties...) {
+  $spec: ();
+  @if length($properties) > 1 {
+    @for $i from 1 through length($properties) {
+      $spec: append($spec, nth($properties, $i), comma);
+    }
+  } @else {
+    $spec: $properties;
+  }
+  @include trans-prefix($spec, -webkit-);
+  @include trans-prefix($spec, -moz-);
+  @include trans-prefix($spec);
+}
