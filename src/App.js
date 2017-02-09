@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Isvg from 'react-inlinesvg';
+import NavLink from './components/NavLink';
 import navIconGraph from './images/icons/icon-tab-graph.svg';
+import RecordIndex from './components/record/RecordIndex';
 
 class App extends Component {
   render() {
@@ -11,30 +12,16 @@ class App extends Component {
             <h1 className="title-bar__title"> Title </h1>
           </div>
         </div>
+
         <div className="padding-1">
-          <h1 className="size-1-5">Ripley prototype</h1>
+          {this.props.children || <RecordIndex/>}
         </div>
+
         <div className="tab-bar">
-          <a href="#" className="tab-bar__link">
-            <Isvg src={navIconGraph} className="tab-bar__icon width-1"> </Isvg>
-            <span className="tab-bar__label">Nav link</span>
-          </a>
-          <a href="#" className="tab-bar__link">
-            <Isvg src={navIconGraph} className="tab-bar__icon width-1"> </Isvg>
-            <span className="tab-bar__label">Nav link</span>
-          </a>
-          <a href="#" className="tab-bar__link">
-            <Isvg src={navIconGraph} className="tab-bar__icon width-1"> </Isvg>
-            <span className="tab-bar__label">Nav link</span>
-          </a>
-          <a href="#" className="tab-bar__link">
-            <Isvg src={navIconGraph} className="tab-bar__icon width-1"> </Isvg>
-            <span className="tab-bar__label">Nav link</span>
-          </a>
-          <a href="#" className="tab-bar__link">
-            <Isvg src={navIconGraph} className="tab-bar__icon width-1"> </Isvg>
-            <span className="tab-bar__label">Nav link</span>
-          </a>
+          <NavLink to="/" onlyActiveOnIndex={true} icon={navIconGraph} label="Nauhoita" />
+          <NavLink to="/games" icon={navIconGraph} label="Pelit" />
+          <NavLink to="/teams" icon={navIconGraph} label="Joukkueet" />
+          <NavLink to="/players" icon={navIconGraph} label="Pelaajat" />
         </div>
       </div>
     );
