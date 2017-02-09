@@ -161,7 +161,7 @@ body {
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #161a1d;
+  color: #1d1616;
   -webkit-tap-highlight-color: transparent;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -171,7 +171,7 @@ body {
   line-height: 1rem;
   font-size: 0.7rem;
   font-weight: 400;
-  background-color: #f9fafb; }
+  background-color: #fbf9f9; }
 
 .borders {
   border-style: solid;
@@ -260,34 +260,34 @@ body {
   color: #000c1a; }
 
 .color .color-gray-lighten-5 {
-  color: #f9fafb; }
+  color: #fbf9f9; }
 
 .color .color-gray-lighten-4 {
-  color: #f1f2f4; }
+  color: #f4f1f1; }
 
 .color .color-gray-lighten-3 {
-  color: #d7dbe0; }
+  color: #e0d7d7; }
 
 .color .color-gray-lighten-2 {
-  color: #c5ccd3; }
+  color: #d3c5c5; }
 
 .color .color-gray-lighten-1 {
-  color: #b4bdc5; }
+  color: #c5b4b4; }
 
 .color .color-gray {
-  color: #929eab; }
+  color: #ab9292; }
 
 .color .color-gray-darken-1 {
-  color: #667585; }
+  color: #856666; }
 
 .color .color-gray-darken-2 {
-  color: #54616d; }
+  color: #6d5454; }
 
 .color .color-gray-darken-3 {
-  color: #3a424b; }
+  color: #4b3a3a; }
 
 .color .color-gray-darken-4 {
-  color: #161a1d; }
+  color: #1d1616; }
 
 .color .color-green-lighten-5 {
   color: #e6faf4; }
@@ -428,34 +428,34 @@ body {
   background-color: #000c1a; }
 
 .bg .bg-gray-lighten-5 {
-  background-color: #f9fafb; }
+  background-color: #fbf9f9; }
 
 .bg .bg-gray-lighten-4 {
-  background-color: #f1f2f4; }
+  background-color: #f4f1f1; }
 
 .bg .bg-gray-lighten-3 {
-  background-color: #d7dbe0; }
+  background-color: #e0d7d7; }
 
 .bg .bg-gray-lighten-2 {
-  background-color: #c5ccd3; }
+  background-color: #d3c5c5; }
 
 .bg .bg-gray-lighten-1 {
-  background-color: #b4bdc5; }
+  background-color: #c5b4b4; }
 
 .bg .bg-gray {
-  background-color: #929eab; }
+  background-color: #ab9292; }
 
 .bg .bg-gray-darken-1 {
-  background-color: #667585; }
+  background-color: #856666; }
 
 .bg .bg-gray-darken-2 {
-  background-color: #54616d; }
+  background-color: #6d5454; }
 
 .bg .bg-gray-darken-3 {
-  background-color: #3a424b; }
+  background-color: #4b3a3a; }
 
 .bg .bg-gray-darken-4 {
-  background-color: #161a1d; }
+  background-color: #1d1616; }
 
 .bg .bg-green-lighten-5 {
   background-color: #e6faf4; }
@@ -596,34 +596,34 @@ body {
   border-color: #000c1a; }
 
 .border-color .border-color-gray-lighten-5 {
-  border-color: #f9fafb; }
+  border-color: #fbf9f9; }
 
 .border-color .border-color-gray-lighten-4 {
-  border-color: #f1f2f4; }
+  border-color: #f4f1f1; }
 
 .border-color .border-color-gray-lighten-3 {
-  border-color: #d7dbe0; }
+  border-color: #e0d7d7; }
 
 .border-color .border-color-gray-lighten-2 {
-  border-color: #c5ccd3; }
+  border-color: #d3c5c5; }
 
 .border-color .border-color-gray-lighten-1 {
-  border-color: #b4bdc5; }
+  border-color: #c5b4b4; }
 
 .border-color .border-color-gray {
-  border-color: #929eab; }
+  border-color: #ab9292; }
 
 .border-color .border-color-gray-darken-1 {
-  border-color: #667585; }
+  border-color: #856666; }
 
 .border-color .border-color-gray-darken-2 {
-  border-color: #54616d; }
+  border-color: #6d5454; }
 
 .border-color .border-color-gray-darken-3 {
-  border-color: #3a424b; }
+  border-color: #4b3a3a; }
 
 .border-color .border-color-gray-darken-4 {
-  border-color: #161a1d; }
+  border-color: #1d1616; }
 
 .border-color .border-color-green-lighten-5 {
   border-color: #e6faf4; }
@@ -764,34 +764,34 @@ body {
   stroke: #000c1a; }
 
 .stroke .stroke-gray-lighten-5 {
-  stroke: #f9fafb; }
+  stroke: #fbf9f9; }
 
 .stroke .stroke-gray-lighten-4 {
-  stroke: #f1f2f4; }
+  stroke: #f4f1f1; }
 
 .stroke .stroke-gray-lighten-3 {
-  stroke: #d7dbe0; }
+  stroke: #e0d7d7; }
 
 .stroke .stroke-gray-lighten-2 {
-  stroke: #c5ccd3; }
+  stroke: #d3c5c5; }
 
 .stroke .stroke-gray-lighten-1 {
-  stroke: #b4bdc5; }
+  stroke: #c5b4b4; }
 
 .stroke .stroke-gray {
-  stroke: #929eab; }
+  stroke: #ab9292; }
 
 .stroke .stroke-gray-darken-1 {
-  stroke: #667585; }
+  stroke: #856666; }
 
 .stroke .stroke-gray-darken-2 {
-  stroke: #54616d; }
+  stroke: #6d5454; }
 
 .stroke .stroke-gray-darken-3 {
-  stroke: #3a424b; }
+  stroke: #4b3a3a; }
 
 .stroke .stroke-gray-darken-4 {
-  stroke: #161a1d; }
+  stroke: #1d1616; }
 
 .stroke .stroke-green-lighten-5 {
   stroke: #e6faf4; }
@@ -932,34 +932,34 @@ body {
   fill: #000c1a; }
 
 .fill .fill-gray-lighten-5 {
-  fill: #f9fafb; }
+  fill: #fbf9f9; }
 
 .fill .fill-gray-lighten-4 {
-  fill: #f1f2f4; }
+  fill: #f4f1f1; }
 
 .fill .fill-gray-lighten-3 {
-  fill: #d7dbe0; }
+  fill: #e0d7d7; }
 
 .fill .fill-gray-lighten-2 {
-  fill: #c5ccd3; }
+  fill: #d3c5c5; }
 
 .fill .fill-gray-lighten-1 {
-  fill: #b4bdc5; }
+  fill: #c5b4b4; }
 
 .fill .fill-gray {
-  fill: #929eab; }
+  fill: #ab9292; }
 
 .fill .fill-gray-darken-1 {
-  fill: #667585; }
+  fill: #856666; }
 
 .fill .fill-gray-darken-2 {
-  fill: #54616d; }
+  fill: #6d5454; }
 
 .fill .fill-gray-darken-3 {
-  fill: #3a424b; }
+  fill: #4b3a3a; }
 
 .fill .fill-gray-darken-4 {
-  fill: #161a1d; }
+  fill: #1d1616; }
 
 .fill .fill-green-lighten-5 {
   fill: #e6faf4; }
@@ -1100,34 +1100,34 @@ body {
   outline: #000c1a; }
 
 .outline .outline-gray-lighten-5 {
-  outline: #f9fafb; }
+  outline: #fbf9f9; }
 
 .outline .outline-gray-lighten-4 {
-  outline: #f1f2f4; }
+  outline: #f4f1f1; }
 
 .outline .outline-gray-lighten-3 {
-  outline: #d7dbe0; }
+  outline: #e0d7d7; }
 
 .outline .outline-gray-lighten-2 {
-  outline: #c5ccd3; }
+  outline: #d3c5c5; }
 
 .outline .outline-gray-lighten-1 {
-  outline: #b4bdc5; }
+  outline: #c5b4b4; }
 
 .outline .outline-gray {
-  outline: #929eab; }
+  outline: #ab9292; }
 
 .outline .outline-gray-darken-1 {
-  outline: #667585; }
+  outline: #856666; }
 
 .outline .outline-gray-darken-2 {
-  outline: #54616d; }
+  outline: #6d5454; }
 
 .outline .outline-gray-darken-3 {
-  outline: #3a424b; }
+  outline: #4b3a3a; }
 
 .outline .outline-gray-darken-4 {
-  outline: #161a1d; }
+  outline: #1d1616; }
 
 .outline .outline-green-lighten-5 {
   outline: #e6faf4; }
@@ -1933,5 +1933,5 @@ body {
   max-width: 1366px;
   min-height: 100%;
   margin: 0 auto;
-  box-shadow: 0 0 100px 10px rgba(22, 26, 29, 0.2);
+  box-shadow: 0 0 100px 10px rgba(29, 22, 22, 0.2);
   background-color: white; }
