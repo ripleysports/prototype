@@ -12,6 +12,7 @@
 @import "tachyons/borders";
 @import "tachyons/colors";
 @import "tachyons/flexbox";
+@import "tachyons/layout";
 @import "tachyons/spacing";
 @import "tachyons/type";
 
@@ -20,3 +21,5 @@
 
 // Modules
 @import "modules/frame";
+@import "modules/tab-bar";
+@import "modules/title-bar";

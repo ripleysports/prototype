@@ -10,9 +10,12 @@
   @include display(flex);
   @include flex-direction(column);
   position: relative;
-  max-width: 1366px;
+  max-width: $max-width;
   min-height: 100%;
   margin: 0 auto;
+
+  padding-top: $title-height;
+  padding-bottom: $tab-height;
 
   box-shadow: 0 0 100px 10px rgba(color(gray, darken-4), 0.2);
 

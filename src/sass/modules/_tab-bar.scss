@@ -1,0 +1,52 @@
+$tab-bar-bg: color(primary);
+$tab-bar-color-base: color(white);
+$tab-bar-color-active: color(white);
+
+.tab-bar {
+  @include display(flex);
+  @include align-items(center);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  max-width: $max-width;
+  height: $tab-height;
+
+  background-color: $tab-bar-bg;
+
+  z-index: 100;
+}
+.tab-bar__link {
+  @include flex-basis(0);
+  @include flex-grow(1);
+  display: block;
+  position: relative;
+
+  text-align: center;
+}
+.tab-bar__icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 32px;
+
+
+  fill: $tab-bar-color-base;
+  .nav__link--active & {
+    fill: $tab-bar-color-active;
+  }
+}
+.tab-bar__label {
+  display: block;
+
+  color: $tab-bar-color-base;
+  line-height: 1;
+  font-size: 14px;
+
+  white-space: nowrap;
+  .nav__link--active & {
+    color: $tab-bar-color-active;
+  }
+}

@@ -1,6 +1,6 @@
 //
 // Palette
-$hue-primary: 211;
+$hue-primary: 200;
 $hue-gray:    0;
 $hue-green:   162;
 $hue-yellow:  48;
@@ -99,6 +99,12 @@ $mq-points: (
   xl2: 1420,
   xl3: 1600
 );
+
+// Misc
+
+$max-width: 1366px;
+$title-height: 54px;
+$tab-height: 64px;
 
 //
 // Animation

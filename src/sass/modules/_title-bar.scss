@@ -1,0 +1,28 @@
+$title-bar-bg: color(primary);
+$title-bar-color: color(white);
+.title-bar {
+  @include display(flex);
+  @include align-items(center);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  max-width: $max-width;
+  height: $title-height;
+
+  background-color: $title-bar-bg;
+  z-index: 100;
+}
+.title-bar__middle {
+  @include flex-basis(0);
+  @include flex-grow(1);
+
+  text-align: center;
+}
+.title-bar__title {
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 20px;
+  color: $title-bar-color;
+}
