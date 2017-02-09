@@ -1,0 +1,20 @@
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.frame {
+  @include display(flex);
+  @include flex-direction(column);
+  position: relative;
+  max-width: 1366px;
+  min-height: 100%;
+  margin: 0 auto;
+
+  box-shadow: 0 0 100px 10px rgba(color(gray, darken-4), 0.2);
+
+  background-color: color(white);
+}
