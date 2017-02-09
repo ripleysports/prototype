@@ -1,5 +1,5 @@
 $tab-bar-bg: color(primary);
-$tab-bar-color-base: color(white);
+$tab-bar-color-base: rgba(color(white), 0.5);
 $tab-bar-color-active: color(white);
 
 .tab-bar {
@@ -34,7 +34,7 @@ $tab-bar-color-active: color(white);
 
 
   fill: $tab-bar-color-base;
-  .nav__link--active & {
+  .tab-bar__link--active & {
     fill: $tab-bar-color-active;
   }
 }
@@ -46,7 +46,7 @@ $tab-bar-color-active: color(white);
   font-size: 14px;
 
   white-space: nowrap;
-  .nav__link--active & {
+  .tab-bar__link--active & {
     color: $tab-bar-color-active;
   }
 }
