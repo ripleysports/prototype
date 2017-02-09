@@ -1,6 +1,19 @@
+// Setup
 @import "setup/reset";
+@import "setup/bourbon/bourbon";
 @import "setup/baseline";
 @import "setup/variables";
 @import "setup/mixins";
 
+// Base styles
 @import "base/general";
+
+// Tachyons
+@import "tachyons/borders";
+@import "tachyons/colors";
+@import "tachyons/flexbox";
+@import "tachyons/spacing";
+@import "tachyons/type";
+
+
+// Components
