@@ -8,7 +8,7 @@
     {"name": "Joukkue 2"}
   ],
   "players": [
-    {"name": "Pelaaja 1"},
-    {"name": "Pelaaja 2"}
+    {"name": "Pelaaja 1", "age": 17},
+    {"name": "Pelaaja 2", "age": 16}
   ]
 }
