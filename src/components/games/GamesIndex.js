@@ -14,7 +14,6 @@ class GamesIndex extends Component {
             </Link>)
           }
         </ul>
-        {this.props.children}
       </div>
     );
   }

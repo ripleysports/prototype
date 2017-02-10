@@ -14,7 +14,6 @@ class PlayersIndex extends Component {
             </Link>)
           }
         </ul>
-        {this.props.children}
       </div>
     );
   }
