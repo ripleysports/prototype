@@ -2,5 +2,13 @@
   "games": [
     {"name": "Peli 1"},
     {"name": "Peli 2"}
+  ],
+  "teams": [
+    {"name": "Joukkue 1"},
+    {"name": "Joukkue 2"}
+  ],
+  "players": [
+    {"name": "Pelaaja 1"},
+    {"name": "Pelaaja 2"}
   ]
 }
