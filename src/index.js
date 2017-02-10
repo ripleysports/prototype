@@ -15,8 +15,8 @@ ReactDOM.render((
       <Route path="/" component={App} title="Ripley">
         <Route path="/games" component={GamesIndex} title="Pelit"/>
         <Route path="/games/:gameName" component={Game} title="Pelit"/>
-        <Route path="/teams" component={TeamsIndex} />
-        <Route path="/players" component={PlayersIndex} />
+        <Route path="/teams" component={TeamsIndex} title="Joukkueet"/>
+        <Route path="/players" component={PlayersIndex} title="Pelaajat"/>
       </Route>
     </Router>
   ),
