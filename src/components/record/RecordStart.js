@@ -33,10 +33,10 @@ class RecordStart extends Component {
       }
     });
 
-    let homeTeam = teamOptions.filter((option) => option.value != selectedTeams[1])
-    let awayTeam = teamOptions.filter((option) => option.value != selectedTeams[0])
+    const homeTeam = teamOptions.filter((option) => option.value != selectedTeams[1])
+    const awayTeam = teamOptions.filter((option) => option.value != selectedTeams[0])
 
-    let teamsList = [
+    const teamsList = [
       {
         key: 'col1',
         props: {
