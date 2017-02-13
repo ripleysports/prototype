@@ -24,17 +24,15 @@
 @mixin map-to-class($map, $property, $selector, $divider: '') {
   $selector: if($selector == '' and &, &, $selector);
 
-  #{$selector} {
-    @each $key, $value in $map {
-      $suffix: if($key == 'base', '', $divider + $key);
-      @at-root #{$selector}#{$suffix} {
-        @if type-of($value) == map {
-          @include map-to-class($value, $property, '', $divider) {
-            @content;
-          }
-        } @else {
-          #{$property}: $value;
+  @each $key, $value in $map {
+    $suffix: if($key == 'base', '', $divider + $key);
+    @at-root #{$selector}#{$suffix} {
+      @if type-of($value) == map {
+        @include map-to-class($value, $property, '', $divider) {
+          @content;
         }
+      } @else {
+        #{$property}: $value;
       }
     }
   }
