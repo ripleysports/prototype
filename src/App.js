@@ -30,7 +30,7 @@ class App extends Component {
         </div>
 
         <div className="tab-bar">
-          <NavLink to="/" onlyActiveOnIndex={true} icon={navIconGraph} label="Nauhoita" />
+          <NavLink to="/record" icon={navIconGraph} label="Nauhoita" />
           <NavLink to="/games" icon={navIconGraph} label="Pelit" />
           <NavLink to="/teams" icon={navIconGraph} label="Joukkueet" />
           <NavLink to="/players" icon={navIconGraph} label="Pelaajat" />
