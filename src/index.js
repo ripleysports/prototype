@@ -15,12 +15,18 @@ import './index.css';
 ReactDOM.render((
     <Router history={browserHistory}>
       <Route path="/" component={App} title="Ripley">
-        <Route path="/games" component={GamesIndex} title="Pelit"/>
-        <Route path="/games/:gameSlug" component={Game} title="Pelit"/>
-        <Route path="/teams" component={TeamsIndex} title="Joukkueet"/>
-        <Route path="/teams/:teamSlug" component={Team} title="Joukkueet"/>
-        <Route path="/players" component={PlayersIndex} title="Pelaajat"/>
-        <Route path="/players/:playerSlug" component={Player} title="Pelaajat"/>
+        <Route path="/games" title="Pelit">
+          <IndexRoute component={GamesIndex} />
+          <Route path="/games/:gameSlug" component={Game} />
+        </Route>
+        <Route path="/teams" title="Joukkueet">
+          <IndexRoute component={TeamsIndex}/>
+          <Route path="/teams/:teamSlug" component={Team} title="Joukkueet"/>
+        </Route>
+        <Route path="/players" title="Pelaajat">
+          <IndexRoute component={PlayersIndex}/>
+          <Route path="/players/:playerSlug" component={Player} title="Pelaajat"/>
+        </Route>
       </Route>
     </Router>
   ),
