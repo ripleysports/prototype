@@ -9,6 +9,11 @@
       "slug": "peli-2",
       "id": 2,
       "name": "Peli 2"
+    },
+    {
+      "slug": "peli-3",
+      "id": 3,
+      "name": "Peli 3"
     }
   ],
   "teams": [
@@ -21,6 +26,11 @@
       "slug": "joukkue-2",
       "id": 2,
       "name": "Joukkue 2"
+    },
+    {
+      "slug": "joukkue-3",
+      "id": 3,
+      "name": "Joukkue 3"
     }
   ],
   "players": [
@@ -33,6 +43,12 @@
     {
       "slug": "pelaaja-2",
       "id": 2,
+      "firstName": "Etunimi",
+      "lastName": "Sukunimi"
+    },
+    {
+      "slug": "pelaaja-3",
+      "id": 3,
       "firstName": "Etunimi",
       "lastName": "Sukunimi"
     }
