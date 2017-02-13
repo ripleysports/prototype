@@ -9,7 +9,7 @@ class GamesIndex extends Component {
         <h1 className="bold margin-1 margin-bottom size-1-5">Pelit</h1>
         <ul className="child-margins-y-0-5">
           {data.games.map(game =>
-            <Link to={`/games/${game.name.toLowerCase().replace(' ', '-')}`} key={game.name} className="block">
+            <Link to={`/games/${game.slug}`} key={game.id} className="block">
               {game.name}
             </Link>)
           }

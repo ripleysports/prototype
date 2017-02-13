@@ -1,14 +1,40 @@
 {
   "games": [
-    {"name": "Peli 1"},
-    {"name": "Peli 2"}
+    {
+      "slug": "peli-1",
+      "id": 1,
+      "name": "Peli 1"
+    },
+    {
+      "slug": "peli-2",
+      "id": 2,
+      "name": "Peli 2"
+    }
   ],
   "teams": [
-    {"name": "Joukkue 1"},
-    {"name": "Joukkue 2"}
+    {
+      "slug": "joukkue-1",
+      "id": 1,
+      "name": "Joukkue 1"
+    },
+    {
+      "slug": "joukkue-2",
+      "id": 2,
+      "name": "Joukkue 2"
+    }
   ],
   "players": [
-    {"name": "Pelaaja 1", "age": 17},
-    {"name": "Pelaaja 2", "age": 16}
+    {
+      "slug": "pelaaja-1",
+      "id": 1,
+      "firstName": "Etunimi",
+      "lastName": "Sukunimi"
+    },
+    {
+      "slug": "pelaaja-2",
+      "id": 2,
+      "firstName": "Etunimi",
+      "lastName": "Sukunimi"
+    }
   ]
 }
