@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import update from 'immutability-helper';
 import { Link } from 'react-router';
 import MultiPicker from 'rmc-picker/lib/MultiPicker.web';
 import data from '../../data/data.json';
@@ -8,44 +9,47 @@ class RecordStart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: this.getTeams(),
-      value: [1, 2],
+      selectedTeams: [1, 2],
     };
   }
+  componentWillMount() {
+    this.setState({teams: this.getTeams(this.state.selectedTeams)});
+  }
   onChange(value) {
-    console.log('onChange', value);
+    const oldSelected = this.state.selectedTeams;
+    const newSelected = update(oldSelected, {$set: value} );
+    const oldTeams = this.state.teams;
+    const newTeams = update(oldTeams, {$set: this.getTeams(newSelected)} );
     this.setState({
-      value
+      teams: newTeams,
+      selectedTeams: newSelected
     });
   }
-  getTeams() {
+  getTeams(selectedTeams) {
+    const teamOptions = data.teams.map(team => {
+      return {
+        label: team.name,
+        value: team.id
+      }
+    });
+
+    let homeTeam = teamOptions.filter((option) => option.value != selectedTeams[1])
+    let awayTeam = teamOptions.filter((option) => option.value != selectedTeams[0])
+
     let teamsList = [
       {
         key: 'col1',
         props: {
-          children: [
-
-          ]
+          children: homeTeam
         }
       },
       {
         key: 'col2',
         props: {
-          children: [
-          ]
+          children: awayTeam
         }
       }
     ];
-    _.forEach(teamsList, function(column) {
-      data.teams.map(team =>
-        column.props.children.push(
-          {
-            label: team.name,
-            value: team.id
-          }
-        )
-      );
-    });
     return teamsList;
   }
   render() {
@@ -53,10 +57,10 @@ class RecordStart extends Component {
       <div>
         <h1 className="bold margin-1 margin-bottom size-1-5">Valitse joukkueet</h1>
         <MultiPicker
-          selectedValue={this.state.value}
+          selectedValue={this.state.selectedTeams}
           onValueChange={this.onChange.bind(this)}
         >
-          {this.state.items}
+          {this.state.teams}
         </MultiPicker>
         <Link to={`/record/active`} className="block padding-0-5 padding-y border-color-gray-lighten-3 color-primary">
           Aloita nauhoitus
