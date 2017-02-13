@@ -31,6 +31,26 @@
       "slug": "joukkue-3",
       "id": 3,
       "name": "Joukkue 3"
+    },
+    {
+      "slug": "joukkue-4",
+      "id": 4,
+      "name": "Joukkue 4"
+    },
+    {
+      "slug": "joukkue-5",
+      "id": 5,
+      "name": "Joukkue 5"
+    },
+    {
+      "slug": "joukkue-6",
+      "id": 6,
+      "name": "Joukkue 6"
+    },
+    {
+      "slug": "joukkue-7",
+      "id": 7,
+      "name": "Joukkue 7"
     }
   ],
   "players": [
