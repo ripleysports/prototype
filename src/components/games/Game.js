@@ -6,7 +6,7 @@ class Game extends Component {
   render() {
     const game = _.find(data.games, (game) => game.slug === this.props.params.gameSlug);
     return (
-      <div>
+      <div className="padding-1">
         <ul>
           {_.keys(game).map(function (key) {
               return (

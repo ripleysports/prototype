@@ -25,7 +25,7 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="padding-1">
+        <div className="flex vertical grow">
           {this.props.children || <RecordIndex/>}
         </div>
 

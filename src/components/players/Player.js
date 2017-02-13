@@ -7,7 +7,7 @@ class Player extends Component {
   render() {
     const player = _.find(data.players, (player) => player.slug === this.props.params.playerSlug);
     return (
-      <div>
+      <div className="padding-1">
         <ul>
           {_.keys(player).map(function (key) {
               return (

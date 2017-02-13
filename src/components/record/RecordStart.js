@@ -54,17 +54,23 @@ class RecordStart extends Component {
   }
   render() {
     return (
-      <div>
-        <h1 className="bold margin-1 margin-bottom size-1-5">Valitse joukkueet</h1>
-        <MultiPicker
-          selectedValue={this.state.selectedTeams}
-          onValueChange={this.onChange.bind(this)}
-        >
-          {this.state.teams}
-        </MultiPicker>
-        <Link to={`/record/active`} className="block padding-0-5 padding-y border-color-gray-lighten-3 color-primary">
-          Aloita nauhoitus
-        </Link>
+      <div className="flex grow vertical">
+        <div className="padding-1 text-align-center padding-bottom-0">
+          <h1 className="bold margin-1 margin-top size-1-5">Valitse joukkueet</h1>
+        </div>
+        <div className="flex vertical grow">
+          <MultiPicker
+            selectedValue={this.state.selectedTeams}
+            onValueChange={this.onChange.bind(this)}
+          >
+            {this.state.teams}
+          </MultiPicker>
+        </div>
+        <div className="padding-1 text-align-center">
+          <Link to={`/record/active`} className="color-primary margin-1 margin-bottom">
+            Aloita nauhoitus
+          </Link>
+        </div>
       </div>
     );
   }

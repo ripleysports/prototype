@@ -1,6 +1,6 @@
 $pickerPrefixCls: rmc-picker;
 $multiPickerPrefixCls: rmc-multi-picker;
-$picker-item-height: 34px;
+$picker-item-height: 50px;
 
 .rmc-picker {
   display: block;
@@ -29,16 +29,16 @@ $picker-item-height: 34px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)),
     linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
     background-position: top, bottom;
-    background-size: 100% 102px;
+    background-size: 100% 150px;
     background-repeat: no-repeat;
   }
 
   &-item {
     text-align: center;
-    font-size: 16px;
+    font-size: font-size(1);
     line-height: $picker-item-height;
     height: $picker-item-height;
-    color: #000;
+    color: color(gray, darken-4);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -60,12 +60,33 @@ $picker-item-height: 34px;
     background-repeat: no-repeat;
   }
 }
-
+.rmc-picker-item-selected {
+  color: color(white);
+  background-color: color(primary);
+}
 .rmc-multi-picker {
+  position: relative;
   display: flex;
   align-items: center;
-  padding: 10px 0;
+  &:after {
+    content: 'VS';
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
 
+    border-radius: 3rem;
+
+    font-size: font-size(1-5);
+    line-height: 3rem;
+    text-align: center;
+    color: color(white);
+
+    @include transform(translateX(-50%));
+    z-index: 50000;
+    background-color: color(gray, darken-3);
+  }
   &-item {
     flex: 1;
     text-align: center;

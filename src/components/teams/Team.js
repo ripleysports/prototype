@@ -6,7 +6,7 @@ class Team extends Component {
   render() {
     const team = _.find(data.teams, (team) => team.slug === this.props.params.teamSlug);
     return (
-      <div>
+      <div className="padding-1">
         <ul>
           {_.keys(team).map(function (key) {
               return (

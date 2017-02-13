@@ -161,7 +161,7 @@ body {
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #1d1616;
+  color: #1a1a1a;
   -webkit-tap-highlight-color: transparent;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -171,7 +171,7 @@ body {
   line-height: 1rem;
   font-size: 0.7rem;
   font-weight: 400;
-  background-color: #fbf9f9; }
+  background-color: #fafafa; }
 
 .borders {
   border-style: solid;
@@ -260,34 +260,34 @@ body {
   color: #00111a; }
 
 .color-gray-lighten-5 {
-  color: #fbf9f9; }
+  color: #fafafa; }
 
 .color-gray-lighten-4 {
-  color: #f4f1f1; }
+  color: #f2f2f2; }
 
 .color-gray-lighten-3 {
-  color: #e0d7d7; }
+  color: #dbdbdb; }
 
 .color-gray-lighten-2 {
-  color: #d3c5c5; }
+  color: #cccccc; }
 
 .color-gray-lighten-1 {
-  color: #c5b4b4; }
+  color: #bdbdbd; }
 
 .color-gray {
-  color: #ab9292; }
+  color: #9e9e9e; }
 
 .color-gray-darken-1 {
-  color: #856666; }
+  color: #757575; }
 
 .color-gray-darken-2 {
-  color: #6d5454; }
+  color: #616161; }
 
 .color-gray-darken-3 {
-  color: #4b3a3a; }
+  color: #424242; }
 
 .color-gray-darken-4 {
-  color: #1d1616; }
+  color: #1a1a1a; }
 
 .color-green-lighten-5 {
   color: #e6faf4; }
@@ -428,34 +428,34 @@ body {
   background-color: #00111a; }
 
 .bg-gray-lighten-5 {
-  background-color: #fbf9f9; }
+  background-color: #fafafa; }
 
 .bg-gray-lighten-4 {
-  background-color: #f4f1f1; }
+  background-color: #f2f2f2; }
 
 .bg-gray-lighten-3 {
-  background-color: #e0d7d7; }
+  background-color: #dbdbdb; }
 
 .bg-gray-lighten-2 {
-  background-color: #d3c5c5; }
+  background-color: #cccccc; }
 
 .bg-gray-lighten-1 {
-  background-color: #c5b4b4; }
+  background-color: #bdbdbd; }
 
 .bg-gray {
-  background-color: #ab9292; }
+  background-color: #9e9e9e; }
 
 .bg-gray-darken-1 {
-  background-color: #856666; }
+  background-color: #757575; }
 
 .bg-gray-darken-2 {
-  background-color: #6d5454; }
+  background-color: #616161; }
 
 .bg-gray-darken-3 {
-  background-color: #4b3a3a; }
+  background-color: #424242; }
 
 .bg-gray-darken-4 {
-  background-color: #1d1616; }
+  background-color: #1a1a1a; }
 
 .bg-green-lighten-5 {
   background-color: #e6faf4; }
@@ -596,34 +596,34 @@ body {
   border-color: #00111a; }
 
 .border-color-gray-lighten-5 {
-  border-color: #fbf9f9; }
+  border-color: #fafafa; }
 
 .border-color-gray-lighten-4 {
-  border-color: #f4f1f1; }
+  border-color: #f2f2f2; }
 
 .border-color-gray-lighten-3 {
-  border-color: #e0d7d7; }
+  border-color: #dbdbdb; }
 
 .border-color-gray-lighten-2 {
-  border-color: #d3c5c5; }
+  border-color: #cccccc; }
 
 .border-color-gray-lighten-1 {
-  border-color: #c5b4b4; }
+  border-color: #bdbdbd; }
 
 .border-color-gray {
-  border-color: #ab9292; }
+  border-color: #9e9e9e; }
 
 .border-color-gray-darken-1 {
-  border-color: #856666; }
+  border-color: #757575; }
 
 .border-color-gray-darken-2 {
-  border-color: #6d5454; }
+  border-color: #616161; }
 
 .border-color-gray-darken-3 {
-  border-color: #4b3a3a; }
+  border-color: #424242; }
 
 .border-color-gray-darken-4 {
-  border-color: #1d1616; }
+  border-color: #1a1a1a; }
 
 .border-color-green-lighten-5 {
   border-color: #e6faf4; }
@@ -764,34 +764,34 @@ body {
   stroke: #00111a; }
 
 .stroke-gray-lighten-5 {
-  stroke: #fbf9f9; }
+  stroke: #fafafa; }
 
 .stroke-gray-lighten-4 {
-  stroke: #f4f1f1; }
+  stroke: #f2f2f2; }
 
 .stroke-gray-lighten-3 {
-  stroke: #e0d7d7; }
+  stroke: #dbdbdb; }
 
 .stroke-gray-lighten-2 {
-  stroke: #d3c5c5; }
+  stroke: #cccccc; }
 
 .stroke-gray-lighten-1 {
-  stroke: #c5b4b4; }
+  stroke: #bdbdbd; }
 
 .stroke-gray {
-  stroke: #ab9292; }
+  stroke: #9e9e9e; }
 
 .stroke-gray-darken-1 {
-  stroke: #856666; }
+  stroke: #757575; }
 
 .stroke-gray-darken-2 {
-  stroke: #6d5454; }
+  stroke: #616161; }
 
 .stroke-gray-darken-3 {
-  stroke: #4b3a3a; }
+  stroke: #424242; }
 
 .stroke-gray-darken-4 {
-  stroke: #1d1616; }
+  stroke: #1a1a1a; }
 
 .stroke-green-lighten-5 {
   stroke: #e6faf4; }
@@ -932,34 +932,34 @@ body {
   fill: #00111a; }
 
 .fill-gray-lighten-5 {
-  fill: #fbf9f9; }
+  fill: #fafafa; }
 
 .fill-gray-lighten-4 {
-  fill: #f4f1f1; }
+  fill: #f2f2f2; }
 
 .fill-gray-lighten-3 {
-  fill: #e0d7d7; }
+  fill: #dbdbdb; }
 
 .fill-gray-lighten-2 {
-  fill: #d3c5c5; }
+  fill: #cccccc; }
 
 .fill-gray-lighten-1 {
-  fill: #c5b4b4; }
+  fill: #bdbdbd; }
 
 .fill-gray {
-  fill: #ab9292; }
+  fill: #9e9e9e; }
 
 .fill-gray-darken-1 {
-  fill: #856666; }
+  fill: #757575; }
 
 .fill-gray-darken-2 {
-  fill: #6d5454; }
+  fill: #616161; }
 
 .fill-gray-darken-3 {
-  fill: #4b3a3a; }
+  fill: #424242; }
 
 .fill-gray-darken-4 {
-  fill: #1d1616; }
+  fill: #1a1a1a; }
 
 .fill-green-lighten-5 {
   fill: #e6faf4; }
@@ -1100,34 +1100,34 @@ body {
   outline: #00111a; }
 
 .outline-gray-lighten-5 {
-  outline: #fbf9f9; }
+  outline: #fafafa; }
 
 .outline-gray-lighten-4 {
-  outline: #f4f1f1; }
+  outline: #f2f2f2; }
 
 .outline-gray-lighten-3 {
-  outline: #e0d7d7; }
+  outline: #dbdbdb; }
 
 .outline-gray-lighten-2 {
-  outline: #d3c5c5; }
+  outline: #cccccc; }
 
 .outline-gray-lighten-1 {
-  outline: #c5b4b4; }
+  outline: #bdbdbd; }
 
 .outline-gray {
-  outline: #ab9292; }
+  outline: #9e9e9e; }
 
 .outline-gray-darken-1 {
-  outline: #856666; }
+  outline: #757575; }
 
 .outline-gray-darken-2 {
-  outline: #6d5454; }
+  outline: #616161; }
 
 .outline-gray-darken-3 {
-  outline: #4b3a3a; }
+  outline: #424242; }
 
 .outline-gray-darken-4 {
-  outline: #1d1616; }
+  outline: #1a1a1a; }
 
 .outline-green-lighten-5 {
   outline: #e6faf4; }
@@ -2050,14 +2050,14 @@ body {
   display: block;
   position: relative;
   overflow: hidden;
-  height: 238px; }
+  height: 350px; }
   .rmc-picker-content {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     z-index: 1;
-    padding: 102px 0; }
+    padding: 150px 0; }
   .rmc-picker-mask {
     position: absolute;
     left: 0;
@@ -2068,14 +2068,14 @@ body {
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
     background-position: top, bottom;
-    background-size: 100% 102px;
+    background-size: 100% 150px;
     background-repeat: no-repeat; }
   .rmc-picker-item {
     text-align: center;
-    font-size: 16px;
-    line-height: 34px;
-    height: 34px;
-    color: #000;
+    font-size: 0.7rem;
+    line-height: 50px;
+    height: 50px;
+    color: #1a1a1a;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; }
@@ -2083,8 +2083,8 @@ body {
     right: 0;
     position: absolute;
     left: 0;
-    top: 102px;
-    height: 34px;
+    top: 150px;
+    height: 50px;
     z-index: 3;
     background-image: -webkit-linear-gradient(top, #d0d0d0, #d0d0d0, transparent, transparent), -webkit-linear-gradient(bottom, #d0d0d0, #d0d0d0, transparent, transparent);
     background-image: linear-gradient(to bottom, #d0d0d0, #d0d0d0, transparent, transparent), linear-gradient(to top, #d0d0d0, #d0d0d0, transparent, transparent);
@@ -2092,10 +2092,33 @@ body {
     background-size: 100% 1px;
     background-repeat: no-repeat; }
 
+.rmc-picker-item-selected {
+  color: white;
+  background-color: #006394; }
+
 .rmc-multi-picker {
+  position: relative;
   display: flex;
-  align-items: center;
-  padding: 10px 0; }
+  align-items: center; }
+  .rmc-multi-picker:after {
+    content: 'VS';
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    border-radius: 3rem;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 50000;
+    background-color: #424242; }
   .rmc-multi-picker-item {
     flex: 1;
     text-align: center; }
@@ -2131,7 +2154,7 @@ body {
   margin: 0 auto;
   padding-top: 54px;
   padding-bottom: 64px;
-  box-shadow: 0 0 100px 10px rgba(29, 22, 22, 0.2);
+  box-shadow: 0 0 100px 10px rgba(26, 26, 26, 0.2);
   background-color: white; }
 
 .tab-bar {
