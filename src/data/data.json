@@ -3,54 +3,74 @@
     {
       "slug": "peli-1",
       "id": 1,
-      "name": "Peli 1"
+      "name": "Peli 1",
+      "home": 1,
+      "away": 2
     },
     {
       "slug": "peli-2",
       "id": 2,
-      "name": "Peli 2"
+      "name": "Peli 2",
+      "home": 1,
+      "away": 4
     },
     {
       "slug": "peli-3",
       "id": 3,
-      "name": "Peli 3"
+      "name": "Peli 3",
+      "home": 5,
+      "away": 6
+    },
+    {
+      "slug": "peli-4",
+      "id": 4,
+      "name": "Peli 4",
+      "home": 3,
+      "away": 7
     }
   ],
   "teams": [
     {
       "slug": "joukkue-1",
       "id": 1,
-      "name": "Joukkue 1"
+      "name": "Joukkue 1",
+      "players": [1,2,3,4,5,6]
     },
     {
       "slug": "joukkue-2",
       "id": 2,
-      "name": "Joukkue 2"
+      "name": "Joukkue 2",
+      "players": [1,2,3,4,5,6]
     },
     {
       "slug": "joukkue-3",
       "id": 3,
-      "name": "Joukkue 3"
+      "name": "Joukkue 3",
+      "players": [1,2,3,4,5,6]
     },
     {
       "slug": "joukkue-4",
       "id": 4,
-      "name": "Joukkue 4"
+      "name": "Joukkue 4",
+      "players": [1,2,3,4,5,6]
     },
     {
       "slug": "joukkue-5",
       "id": 5,
-      "name": "Joukkue 5"
+      "name": "Joukkue 5",
+      "players": [1,2,3,4,5,6]
     },
     {
       "slug": "joukkue-6",
       "id": 6,
-      "name": "Joukkue 6"
+      "name": "Joukkue 6",
+      "players": [1,2,3,4,5,6]
     },
     {
       "slug": "joukkue-7",
       "id": 7,
-      "name": "Joukkue 7"
+      "name": "Joukkue 7",
+      "players": [1,2,3,4,5,6]
     }
   ],
   "players": [
@@ -58,19 +78,49 @@
       "slug": "pelaaja-1",
       "id": 1,
       "firstName": "Etunimi",
-      "lastName": "Sukunimi"
+      "lastName": "Sukunimi",
+      "age": 17,
+      "role": "back"
     },
     {
       "slug": "pelaaja-2",
       "id": 2,
       "firstName": "Etunimi",
-      "lastName": "Sukunimi"
+      "lastName": "Sukunimi",
+      "age": 17,
+      "role": "back"
     },
     {
       "slug": "pelaaja-3",
       "id": 3,
       "firstName": "Etunimi",
-      "lastName": "Sukunimi"
+      "lastName": "Sukunimi",
+      "age": 17,
+      "role": "center"
+    },
+    {
+      "slug": "pelaaja-4",
+      "id": 4,
+      "firstName": "Etunimi",
+      "lastName": "Sukunimi",
+      "age": 17,
+      "role": "wing"
+    },
+    {
+      "slug": "pelaaja-5",
+      "id": 5,
+      "firstName": "Etunimi",
+      "lastName": "Sukunimi",
+      "age": 17,
+      "role": "goalie"
+    },
+    {
+      "slug": "pelaaja-6",
+      "id": 6,
+      "firstName": "Etunimi",
+      "lastName": "Sukunimi",
+      "age": 17,
+      "role": "center"
     }
   ]
 }
