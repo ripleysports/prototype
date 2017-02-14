@@ -8,8 +8,12 @@ class GamesIndex extends Component {
     return data.games.map(game => {
       const homeTeam = _.find(data.teams, (team) => team.id === game.home);
       const awayTeam = _.find(data.teams, (team) => team.id === game.away);
+      const gameTeams = {
+        home: homeTeam,
+        away: awayTeam
+      }
       return (
-        <Link to={`/games/${game.slug}`} key={game.id} className="block padding-0-5 padding-y border-color-gray-lighten-3 color-primary">
+        <Link to={{pathname: `/games/${game.slug}`, state: gameTeams }} key={game.id} className="block padding-0-5 padding-y border-color-gray-lighten-3 color-primary">
           <div className="padding-1 padding-x">{homeTeam.name} vs {awayTeam.name}</div>
         </Link>
       );

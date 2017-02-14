@@ -3,28 +3,32 @@
     {
       "slug": "peli-1",
       "id": 1,
-      "name": "Peli 1",
+      "homeScore": 1,
+      "awayScore": 2,
       "home": 1,
       "away": 2
     },
     {
       "slug": "peli-2",
       "id": 2,
-      "name": "Peli 2",
+      "homeScore": 4,
+      "awayScore": 2,
       "home": 1,
       "away": 4
     },
     {
       "slug": "peli-3",
       "id": 3,
-      "name": "Peli 3",
+      "homeScore": 6,
+      "awayScore": 1,
       "home": 5,
       "away": 6
     },
     {
       "slug": "peli-4",
       "id": 4,
-      "name": "Peli 4",
+      "homeScore": 0,
+      "awayScore": 0,
       "home": 3,
       "away": 7
     }
