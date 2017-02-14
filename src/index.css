@@ -2106,17 +2106,18 @@ body {
     width: 3rem;
     height: 3rem;
     position: absolute;
+    top: 50%;
     left: 50%;
     border-radius: 3rem;
     font-size: 1.3rem;
     line-height: 3rem;
     text-align: center;
     color: white;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     z-index: 50000;
     background-color: #424242; }
   .rmc-multi-picker-item {
