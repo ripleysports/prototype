@@ -45,7 +45,7 @@ class Team extends Component {
     const team = _.find(data.teams, (team) => team.slug === this.props.params.teamSlug);
     return (
       <div className="padding-1">
-        <h1 className="bold size-1-25">{this.state.team.name}</h1>
+        <h1 className="bold size-1-5 margin-1 margin-bottom">{this.state.team.name}</h1>
         <h2 className="bold size-1">Pelaajat</h2>
         <ul className="child-borders-y">
           {this.renderPlayers()}
