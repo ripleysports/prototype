@@ -1,22 +1,35 @@
 //
 // Palette
-$hue-primary: 200;
+$hue-primary: 210;
+$hue-secondary: 250;
 $hue-gray:    0;
 $hue-green:   162;
 $hue-yellow:  48;
 $hue-red:     0;
 $colors: (
   "primary": (
-    lighten-5:      hsl($hue-primary, 41%, 93%),
-    lighten-4:      hsl($hue-primary, 40%, 80%),
-    lighten-3:      hsl($hue-primary, 41%, 68%),
-    lighten-2:      hsl($hue-primary, 41%, 55%),
-    lighten-1:      hsl($hue-primary, 57%, 42%),
-    base:           hsl($hue-primary, 100%, 29%),
-    darken-1:       hsl($hue-primary, 100%, 21%),
-    darken-2:       hsl($hue-primary, 100%, 13%),
-    darken-3:       hsl($hue-primary, 100%, 8%),
-    darken-4:       hsl($hue-primary, 100%, 5%)
+    lighten-5:      hsl($hue-primary, 19%, 95%),
+    lighten-4:      hsl($hue-primary, 19%, 70%),
+    lighten-3:      hsl($hue-primary, 19%, 55%),
+    lighten-2:      hsl($hue-primary, 19%, 40%),
+    lighten-1:      hsl($hue-primary, 19%, 25%),
+    base:           hsl($hue-primary, 19%, 10%),
+    darken-1:       hsl($hue-primary, 19%, 8%),
+    darken-2:       hsl($hue-primary, 19%, 6%),
+    darken-3:       hsl($hue-primary, 19%, 4%),
+    darken-4:       hsl($hue-primary, 19%, 2%)
+  ),
+  "secondary": (
+    lighten-5:      hsl($hue-secondary, 64%, 96%),
+    lighten-4:      hsl($hue-secondary, 64%, 87%),
+    lighten-3:      hsl($hue-secondary, 64%, 79%),
+    lighten-2:      hsl($hue-secondary, 64%, 71%),
+    lighten-1:      hsl($hue-secondary, 64%, 62%),
+    base:           hsl($hue-secondary, 64%, 54%),
+    darken-1:       hsl($hue-secondary, 54%, 39%),
+    darken-2:       hsl($hue-secondary, 54%, 20%),
+    darken-3:       hsl($hue-secondary, 54%, 10%),
+    darken-4:       hsl($hue-secondary, 54%, 5%)
   ),
   "gray": (
     lighten-5:      hsl($hue-gray, 0%, 98%),
@@ -77,7 +90,7 @@ $colors: (
 //
 // Type
 $serif: Georgia, Times, "Times New Roman", serif;
-$sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $type: (
   0-75:   0.55rem,

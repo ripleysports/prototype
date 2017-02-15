@@ -56,7 +56,7 @@ class RecordStart extends Component {
     return (
       <div className="flex grow vertical">
         <div className="padding-1 text-align-center padding-bottom-0">
-          <h1 className="bold margin-1 margin-top size-1-5">Valitse joukkueet</h1>
+          <h1 className="margin-1 margin-top size-1-25">Valitse joukkueet</h1>
         </div>
         <div className="flex vertical grow">
           <MultiPicker

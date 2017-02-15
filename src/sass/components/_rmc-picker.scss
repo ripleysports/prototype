@@ -2,6 +2,9 @@ $pickerPrefixCls: rmc-picker;
 $multiPickerPrefixCls: rmc-multi-picker;
 $picker-item-height: 50px;
 
+$picker-mask-color: color(primary);
+$picker-selection-color: rgba(color(primary, lighten-1), 0.7);
+
 .rmc-picker {
   display: block;
   position: relative;
@@ -24,10 +27,10 @@ $picker-item-height: 50px;
     right: 0;
     bottom: 0;
     z-index: 3;
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)),
-    -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)),
-    linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+    background-image: -webkit-linear-gradient(top, rgba($picker-mask-color, 0.95), rgba($picker-mask-color, 0.6)),
+    -webkit-linear-gradient(bottom, rgba($picker-mask-color, 0.95), rgba($picker-mask-color, 0.6));
+    background-image: linear-gradient(to bottom, rgba($picker-mask-color, 0.95), rgba($picker-mask-color, 0.6)),
+    linear-gradient(to top, rgba($picker-mask-color, 0.95), rgba($picker-mask-color, 0.6));
     background-position: top, bottom;
     background-size: 100% 150px;
     background-repeat: no-repeat;
@@ -38,7 +41,7 @@ $picker-item-height: 50px;
     font-size: font-size(1);
     line-height: $picker-item-height;
     height: $picker-item-height;
-    color: color(gray, darken-4);
+    color: color(white);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -51,18 +54,40 @@ $picker-item-height: 50px;
     top: 3*$picker-item-height;
     height: $picker-item-height;
     z-index: 3;
-    background-image: -webkit-linear-gradient(top, #d0d0d0, #d0d0d0, transparent, transparent),
-    -webkit-linear-gradient(bottom, #d0d0d0, #d0d0d0, transparent, transparent);
-    background-image: linear-gradient(to bottom, #d0d0d0, #d0d0d0, transparent, transparent),
-    linear-gradient(to top, #d0d0d0, #d0d0d0, transparent, transparent);
+    // background-image: -webkit-linear-gradient(top, $picker-selection-color, $picker-selection-color, transparent, transparent),
+    // -webkit-linear-gradient(bottom, $picker-selection-color, $picker-selection-color, transparent, transparent);
+    // background-image: linear-gradient(to bottom, $picker-selection-color, $picker-selection-color, transparent, transparent),
+    // linear-gradient(to top, $picker-selection-color, $picker-selection-color, transparent, transparent);
     background-position: top, bottom;
     background-size: 100% 1px;
     background-repeat: no-repeat;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+
+      @include linear-gradient(left, $picker-mask-color 0%, $picker-selection-color 50%, $picker-mask-color 100%)
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+
+      @include linear-gradient(left, $picker-mask-color 0%, $picker-selection-color 50%, $picker-mask-color 100%)
+    }
   }
 }
 .rmc-picker-item-selected {
   color: color(white);
-  background-color: color(primary);
+  @include linear-gradient(left, $picker-mask-color 0%, $picker-selection-color 50%, $picker-mask-color 100%)
 }
 .rmc-multi-picker {
   position: relative;
@@ -70,6 +95,27 @@ $picker-item-height: 50px;
   align-items: center;
   &:after {
     content: 'VS';
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border-radius: 4rem;
+
+    font-size: font-size(1-5);
+    line-height: 4rem;
+    text-align: center;
+    font-weight: 600;
+    color: color(white);
+
+    @include transform(translateX(-50%) translateY(-50%));
+    z-index: 900;
+    background-image: url("images/hexagon.svg");
+  }
+  &:before {
+    content: '';
     display: block;
     width: 3rem;
     height: 3rem;
@@ -79,14 +125,12 @@ $picker-item-height: 50px;
 
     border-radius: 3rem;
 
-    font-size: font-size(1-5);
-    line-height: 3rem;
-    text-align: center;
-    color: color(white);
+    box-shadow: 0 0 80px 10px rgba(color(secondary, lighten-2), 0.4), 0 0 40px 0 rgba(color(secondary, lighten-2), 0.5);
+
 
     @include transform(translateX(-50%) translateY(-50%));
-    z-index: 50000;
-    background-color: color(gray, darken-3);
+    z-index: 800;
+
   }
   &-item {
     flex: 1;

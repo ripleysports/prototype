@@ -6,7 +6,7 @@ body {
 
 html {
   font-family: $sans;
-  color: color(gray, darken-4);
+  color: color(white);
 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   text-rendering: optimizeLegibility;
@@ -19,5 +19,5 @@ body {
   font-size: font-size(1);
   font-weight: 400;
 
-  background-color: color(gray, lighten-5);
+  background-color: color(primary, darken-3);
 }
