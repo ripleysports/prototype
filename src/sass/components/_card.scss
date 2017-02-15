@@ -1,0 +1,18 @@
+.card {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 8rem;
+
+  border: 1px solid color(primary, lighten-1);
+
+  background-color: color(secondary);
+
+}
+.card__content {
+  @include display(flex);
+  @include flex-basis(auto);
+  @include flex-grow(1);
+  > div {
+    width: 100%;
+  }
+}

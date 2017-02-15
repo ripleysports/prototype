@@ -18,10 +18,12 @@
 
 
 // Components
-@import "components/rmc-picker";
 @import "components/button";
+@import "components/card";
+@import "components/rmc-picker";
 
 // Modules
+@import "modules/card-grid";
 @import "modules/frame";
 @import "modules/rink";
 @import "modules/tab-bar";

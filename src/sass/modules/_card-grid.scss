@@ -1,0 +1,35 @@
+.card-grid {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  margin: -0.5rem;
+  .card-grid__item {
+    @include display(flex);
+    @include flex-direction(column);
+    width: 100%;
+    padding: 0.5rem;
+    @include mq(s) {
+      width: 50%;
+    }
+    @include mq(l) {
+      width: 33.333%;
+    }
+    @include mq(xl2) {
+      width: 25%;
+    }
+    > * {
+      @include flex-basis(auto);
+      @include flex-grow(1);
+    }
+  }
+}
+.card-grid--narrow .card-grid__item {
+  @include mq(s) {
+    width: 50%;
+  }
+  @include mq(l) {
+    width: 33.333%;
+  }
+  @include mq(xl2) {
+    width: 33.333%;
+  }
+}
