@@ -1,0 +1,278 @@
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+
+  border-radius: 0.125rem;
+  border: 1px solid;
+  border-color: color(secondary);
+
+
+  font-family: $sans;
+  white-space: nowrap;
+  font-weight: 400;
+  text-align: center;
+  color: color(white);
+  line-height: 1rem;
+  font-size: font-size(1);
+
+  background: color(secondary);
+
+  @include transition(background-color $animation-time $animation-easing, color $animation-time $animation-easing, border-color $animation-time $animation-easing);
+  &:hover {
+    color: color(white);
+    background-color: color(secondary, lighten-1);
+  }
+  &:focus {
+    outline: none;
+    color: color(white);
+    border-color: color(secondary);
+    background-color: color(secondary, darken-1);
+  }
+  &:active, &.button--active {
+    color: color(white);
+    background-color: color(secondary, darken-1);
+  }
+}
+
+//
+// Variations
+.button {
+  &--square {
+    border-radius: 0;
+  }
+  &--round {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 5rem;
+  }
+  &--ghost {
+    color: color(secondary);
+    background-color: transparent;
+    border: 1px solid color(secondary);
+    &:hover {
+      border-color: color(secondary, lighten-2);
+      color: color(secondary, lighten-2);
+      background-color: transparent;
+    }
+    &:focus {
+      outline: none;
+      border-color: color(secondary, darken-1);
+      color: color(secondary, darken-1);
+      background-color: transparent;
+    }
+    &:active, &.button--active {
+      border-color: color(secondary, darken-1);
+      color: color(secondary, darken-1);
+      background-color: transparent;
+    }
+  }
+}
+//
+// Colors
+.button {
+  &--white {
+    color: color(gray, darken-3);
+    border-color: color(gray, lighten-3);
+
+    background: color(white);
+    &:hover {
+      color: color(gray, darken-4);
+      border-color: color(gray, lighten-2);
+      background-color: color(gray, lighten-5);
+    }
+    &:focus {
+      color: color(gray, darken-4);
+      border-color: color(gray);
+      background-color: color(white);
+    }
+    &:active, &.button--active {
+      color: color(gray, darken-4);
+      border-color: color(gray, lighten-3);
+      background-color: color(gray, lighten-4);
+    }
+    &.button--ghost {
+      color: color(white);
+      background-color: transparent;
+      border: 1px solid color(white);
+      &:hover {
+        border-color: color(gray, lighten-3);
+        color: color(gray, lighten-3);
+        background-color: transparent;
+      }
+      &:focus {
+        border-color: color(gray, lighten-1);
+        color: color(gray, lighten-1);
+        background-color: transparent;
+      }
+      &:active, &.button--active {
+        border-color: color(gray, lighten-1);
+        color: color(gray, lighten-1);
+        background-color: transparent;
+      }
+    }
+  }
+  &--green {
+    border-color: color(green);
+
+    background: color(green);
+    &:hover {
+      border-color: color(green, lighten-1);
+      background-color: color(green, lighten-1);
+    }
+    &:focus {
+      border-color: color(green, darken-1);
+      background-color: color(green, darken-1);
+    }
+    &:active, &.button--active {
+      border-color: color(green, darken-1);
+      background-color: color(green, darken-1);
+    }
+    &.button--ghost {
+      color: color(green);
+      background-color: transparent;
+      border: 1px solid color(green);
+      &:hover {
+        border-color: color(green, lighten-2);
+        color: color(green, lighten-2);
+        background-color: transparent;
+      }
+      &:focus {
+        border-color: color(green, darken-1);
+        color: color(green, darken-1);
+        background-color: transparent;
+      }
+      &:active, &.button--active {
+        border-color: color(green, darken-1);
+        color: color(green, darken-1);
+        background-color: transparent;
+      }
+    }
+  }
+  &--yellow {
+    border-color: color(yellow);
+
+    background: color(yellow);
+    &:hover {
+      border-color: color(yellow, lighten-1);
+      background-color: color(yellow, lighten-1);
+    }
+    &:focus {
+      border-color: color(yellow, darken-1);
+      background-color: color(yellow, darken-1);
+    }
+    &:active, &.button--active {
+      border-color: color(yellow, darken-1);
+      background-color: color(yellow, darken-1);
+    }
+    &.button--ghost {
+      color: color(yellow);
+      background-color: transparent;
+      border: 1px solid color(yellow);
+      &:hover {
+        border-color: color(yellow, lighten-2);
+        color: color(yellow, lighten-2);
+        background-color: transparent;
+      }
+      &:focus {
+        border-color: color(yellow, darken-1);
+        color: color(yellow, darken-1);
+        background-color: transparent;
+      }
+      &:active, &.button--active {
+        border-color: color(yellow, darken-1);
+        color: color(yellow, darken-1);
+        background-color: transparent;
+      }
+    }
+  }
+  &--red {
+    border-color: color(red);
+
+    background: color(red);
+    &:hover {
+      border-color: color(red, lighten-1);
+      background-color: color(red, lighten-1);
+    }
+    &:focus {
+      border-color: color(red, darken-1);
+      background-color: color(red, darken-1);
+    }
+    &:active, &.button--active {
+      border-color: color(red, darken-1);
+      background-color: color(red, darken-1);
+    }
+    &.button--ghost {
+      color: color(red);
+      background-color: transparent;
+      border: 1px solid color(red);
+      &:hover {
+        border-color: color(red, lighten-2);
+        color: color(red, lighten-2);
+        background-color: transparent;
+      }
+      &:focus {
+        border-color: color(red, darken-1);
+        color: color(red, darken-1);
+        background-color: transparent;
+      }
+      &:active, &.button--active {
+        border-color: color(red, darken-1);
+        color: color(red, darken-1);
+        background-color: transparent;
+      }
+    }
+  }
+}
+// Disabled
+.button {
+  &--disabled, &:disabled {
+    border-color: color(gray, lighten-3);
+
+    color: color(gray, lighten-1);
+
+    background: color(gray, lighten-4);
+
+    cursor: not-allowed;
+    &:hover, &:focus, &:active {
+      border-color: color(gray, lighten-3);
+
+      color: color(gray, lighten-1);
+
+      background: color(gray, lighten-4);
+    }
+  }
+}
+//
+// Sizes
+.button {
+  &--small {
+    padding: 0.125rem 0.25rem;
+
+    line-height: 0.75rem;
+    font-size: font-size(0-75);
+    &.button--round {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  &--medium {
+    padding: 0.375rem 0.75rem;
+
+    line-height: 1.25rem;
+    font-size: font-size(1-25);
+    &.button--round {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  &--large {
+    padding: 0.5rem 1rem;
+
+    line-height: 1.5rem;
+    font-size: font-size(1-5);
+    &.button--round {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+}

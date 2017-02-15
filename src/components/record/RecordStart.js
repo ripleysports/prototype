@@ -58,7 +58,7 @@ class RecordStart extends Component {
         <div className="padding-1 text-align-center padding-bottom-0">
           <h1 className="margin-1 margin-top size-1-25">Valitse joukkueet</h1>
         </div>
-        <div className="flex vertical grow">
+        <div className="margin-2 margin-bottom">
           <MultiPicker
             selectedValue={this.state.selectedTeams}
             onValueChange={this.onChange.bind(this)}
@@ -67,7 +67,7 @@ class RecordStart extends Component {
           </MultiPicker>
         </div>
         <div className="padding-1 text-align-center">
-          <Link to={`/record/active`} className="color-primary margin-1 margin-bottom">
+          <Link to={`/record/active`} className="button button--round">
             Aloita nauhoitus
           </Link>
         </div>
