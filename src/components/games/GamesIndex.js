@@ -13,8 +13,20 @@ class GamesIndex extends Component {
         away: awayTeam
       }
       return (
-        <Link to={{pathname: `/games/${game.slug}`, state: gameTeams }} key={game.id} className="block padding-0-5 padding-y border-color-gray-lighten-3 color-primary">
-          <div className="padding-1 padding-x">{homeTeam.name} vs {awayTeam.name}</div>
+        <Link to={{pathname: `/games/${game.slug}`, state: gameTeams }} key={game.id} className="block">
+          <div className="game-item flex align-center text-align-center">
+            <div className="game-item__title">
+              {homeTeam.name}
+            </div>
+            <div className="game-item__score">
+            {game.homeScore}
+            -
+            {game.awayScore}
+            </div>
+            <div className="game-item__title">
+              {awayTeam.name}
+            </div>
+          </div>
         </Link>
       );
       }
@@ -22,11 +34,8 @@ class GamesIndex extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="padding-1 padding-bottom-0">
-          <h1 className="bold margin-1 margin-bottom size-1-5">Pelit</h1>
-        </div>
-        <ul className="child-borders-y">
+      <div className="padding-1">
+        <ul>
           {this.renderGameList()}
         </ul>
       </div>

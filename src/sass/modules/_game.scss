@@ -1,0 +1,44 @@
+.game-item {
+  position: relative;
+  margin: 3rem 0;
+  background-color: color(white);
+  border-radius: 0.125rem;
+  &:first-child {
+    margin-top: 2rem;
+  }
+  .game-item__title {
+    @include flex-basis(auto);
+    @include flex-grow(1);
+    padding: 0.25rem 0;
+
+
+    color: color(secondary);
+
+    background-color: color(white);
+    &:first-child {
+      padding-right: 1.5rem;
+    }
+    &:last-child {
+      padding-left: 1.5rem;
+    }
+  }
+  .game-item__score {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 4rem;
+    height: 4rem;
+
+    line-height: 4rem;
+    text-align: center;
+    font-size: font-size(1-25);
+    font-weight: 600;
+
+    background-size: contain;
+    background-image: url("images/hexagon.svg");
+
+    @include transform(translateX(-50%) translateY(-50%));
+    z-index: 800;
+  }
+}

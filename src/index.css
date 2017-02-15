@@ -2718,11 +2718,47 @@ body {
   box-shadow: 0 0 100px 10px #040506;
   background-color: #151a1e; }
 
-.player-avatar {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 2rem; }
+.game-item {
+  position: relative;
+  margin: 3rem 0;
+  background-color: white;
+  border-radius: 0.125rem; }
+  .game-item:first-child {
+    margin-top: 2rem; }
+  .game-item .game-item__title {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    padding: 0.25rem 0;
+    color: #583fd5;
+    background-color: white; }
+    .game-item .game-item__title:first-child {
+      padding-right: 1.5rem; }
+    .game-item .game-item__title:last-child {
+      padding-left: 1.5rem; }
+  .game-item .game-item__score {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-size: contain;
+    background-image: url("images/hexagon.svg");
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 800; }
 
 .rink svg {
   max-height: 400px; }
