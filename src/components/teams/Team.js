@@ -18,7 +18,7 @@ class Team extends Component {
     const players = _.filter(data.players, (player) => _.includes(team.players, player.id));
     return players.map(player => {
       return (
-          <Link to={`/players/${player.slug}`} key={player.id} className="block padding-0-25 size-0-75 padding-y border-color-gray-lighten-3 color-primary">
+          <Link to={`/players/${player.slug}`} key={player.id} className="block padding-0-5 size-0-75 padding-y border-color-primary-lighten-1 color-white">
             {player.firstName} {player.lastName}
           </Link>)
     });
@@ -34,26 +34,79 @@ class Team extends Component {
           away: awayTeam
         }
         return (
-          <Link to={`/games/${game.slug}`} key={game.id} className="block padding-0-25 size-0-75 padding-y border-color-gray-lighten-3 color-primary">
+          <Link to={`/games/${game.slug}`} key={game.id} className="block padding-0-5 size-0-75 padding-y border-color-primary-lighten-1 color-white">
             {homeTeam.name} vs {awayTeam.name}
           </Link>
         );
       }
     );
   }
+  renderStats() {
+    return (
+      <ul className="card-grid card-grid--bordered border-color-red text-align-center">
+        <li className="card-grid__item">
+          <div className="">
+            <h4 className="size-0-75 margin-0-25 margin-bottom">Ottelut</h4>
+            <div classname="size-1">{this.state.team.matches}</div>
+          </div>
+        </li>
+        <li className="card-grid__item">
+          <div className="">
+            <h4 className="size-0-75 margin-0-25 margin-bottom">Maalit</h4>
+            <div classname="size-1">{this.state.team.goals}</div>
+          </div>
+        </li>
+        <li className="card-grid__item">
+          <div className="">
+            <h4 className="size-0-75 margin-0-25 margin-bottom">Päästetyt maalit</h4>
+            <div classname="size-1">{this.state.team.goalsAgainst}</div>
+          </div>
+        </li>
+        <li className="card-grid__item">
+          <div className="">
+            <h4 className="size-0-75 margin-0-25 margin-bottom">Voitot</h4>
+            <div classname="size-1">{this.state.team.wins}</div>
+          </div>
+        </li>
+        <li className="card-grid__item">
+          <div className="">
+            <h4 className="size-0-75 margin-0-25 margin-bottom">Tasapelit</h4>
+            <div classname="size-1">{this.state.team.ties}</div>
+          </div>
+        </li>
+        <li className="card-grid__item">
+          <div className="">
+            <h4 className="size-0-75 margin-0-25 margin-bottom">Häviöt</h4>
+            <div classname="size-1">{this.state.team.lost}</div>
+          </div>
+        </li>
+      </ul>
+    )
+  }
   render() {
     const team = _.find(data.teams, (team) => team.slug === this.props.params.teamSlug);
     return (
-      <div className="padding-1">
-        <h1 className="bold size-1-5 margin-1 margin-bottom">{this.state.team.name}</h1>
-        <h2 className="bold size-1">Pelaajat</h2>
-        <ul className="child-borders-y">
-          {this.renderPlayers()}
-        </ul>
-        <h2 className="bold size-1">Pelit</h2>
-        <ul className="child-borders-y">
-          {this.renderGames()}
-        </ul>
+      <div className="grow flex vertical">
+        <div className="padding-1 text-align-center bg-primary-darken-1">
+          <h1 className="bold size-1-25">{this.state.team.name}</h1>
+        </div>
+        <div className="padding-1">
+          {this.renderStats()}
+        </div>
+        <div className="team grow flex even-children unflex-m bg-primary-darken-1">
+          <div className="team__players padding-1">
+            <h2 className="bold size-1 margin-0-5 margin-bottom">Pelaajat</h2>
+            <ul className="child-borders-y">
+              {this.renderPlayers()}
+            </ul>
+          </div>
+          <div className="team__games padding-1">
+            <h2 className="bold size-1 margin-0-5 margin-bottom">Pelit</h2>
+            <ul className="child-borders-y">
+              {this.renderGames()}
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }

@@ -2635,9 +2635,6 @@ body {
     @media screen and (min-width: 980px) {
       .card-grid .card-grid__item {
         width: 33.333%; } }
-    @media screen and (min-width: 1420px) {
-      .card-grid .card-grid__item {
-        width: 25%; } }
     .card-grid .card-grid__item > * {
       -webkit-flex-basis: auto;
       -moz-flex-basis: auto;
@@ -2647,6 +2644,33 @@ body {
       -moz-flex-grow: 1;
       flex-grow: 1;
       -ms-flex-positive: 1; }
+
+@media screen and (max-width: 979px) {
+  .card-grid--bordered .card-grid__item {
+    border-right: 1px solid #34404c;
+    border-top: 1px solid #34404c; }
+    .card-grid--bordered .card-grid__item:nth-child(2n) {
+      border-right: none; }
+    .card-grid--bordered .card-grid__item:nth-child(1), .card-grid--bordered .card-grid__item:nth-child(2) {
+      border-top: none; } }
+
+@media screen and (max-width: 611px) {
+  .card-grid--bordered .card-grid__item {
+    border: none;
+    border-top: 1px solid #34404c; }
+    .card-grid--bordered .card-grid__item:nth-child(2) {
+      border-top: 1px solid #34404c; }
+    .card-grid--bordered .card-grid__item:first-child {
+      border-top: none; } }
+
+@media screen and (min-width: 980px) {
+  .card-grid--bordered .card-grid__item {
+    border-right: 1px solid #34404c;
+    border-top: 1px solid #34404c; }
+    .card-grid--bordered .card-grid__item:nth-child(3n) {
+      border-right: none; }
+    .card-grid--bordered .card-grid__item:nth-child(1), .card-grid--bordered .card-grid__item:nth-child(2), .card-grid--bordered .card-grid__item:nth-child(3) {
+      border-top: none; } }
 
 @media screen and (min-width: 612px) {
   .card-grid--narrow .card-grid__item {
@@ -2797,6 +2821,30 @@ body {
   white-space: nowrap; }
   .tab-bar__link--active .tab-bar__label {
     color: #9586e4; }
+
+.team {
+  position: relative; }
+  .team:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    left: 1rem;
+    height: 1px;
+    background-color: #34404c; }
+  .team .team__players {
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .team .team__players:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 1rem;
+        bottom: 1rem;
+        right: 0;
+        width: 1px;
+        background-color: #34404c; } }
 
 .title-bar {
   display: -webkit-box;

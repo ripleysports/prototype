@@ -13,12 +13,43 @@
     @include mq(l) {
       width: 33.333%;
     }
-    @include mq(xl2) {
-      width: 25%;
-    }
     > * {
       @include flex-basis(auto);
       @include flex-grow(1);
+    }
+  }
+}
+.card-grid--bordered {
+ .card-grid__item {
+    @include mq(l, max) {
+      border-right: 1px solid color(primary, lighten-1);
+      border-top: 1px solid color(primary, lighten-1);
+      &:nth-child(2n) {
+        border-right: none;
+      }
+      &:nth-child(1), &:nth-child(2){
+        border-top: none;
+      }
+    }
+    @include mq(s, max) {
+      border: none;
+      border-top: 1px solid color(primary, lighten-1);
+      &:nth-child(2) {
+        border-top: 1px solid color(primary, lighten-1);
+      }
+      &:first-child {
+        border-top: none;
+      }
+    }
+    @include mq(l) {
+      border-right: 1px solid color(primary, lighten-1);
+      border-top: 1px solid color(primary, lighten-1);
+      &:nth-child(3n) {
+        border-right: none;
+      }
+      &:nth-child(1), &:nth-child(2), &:nth-child(3 ){
+        border-top: none;
+      }
     }
   }
 }
