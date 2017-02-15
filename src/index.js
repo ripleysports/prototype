@@ -4,7 +4,8 @@ import { Router, Route, browserHistory, IndexRoute, IndexRedirect } from 'react-
 
 import App from './App';
 
-import RecordIndex from './components/record/RecordIndex';
+import CoachIndex from './components/coach/CoachIndex';
+
 import RecordStart from './components/record/RecordStart';
 import RecordActive from './components/record/RecordActive';
 import RecordEnded from './components/record/RecordEnded';
@@ -23,9 +24,12 @@ import './index.css';
 ReactDOM.render((
     <Router history={browserHistory}>
       <Route path="/" component={App} title="Ripley">
-        <IndexRedirect to="/record" />
+        <IndexRedirect to="/coach" />
+        <Route path="/coach" title="Valmennus">
+          <IndexRoute component={CoachIndex} />
+        </Route>
         <Route path="/record" title="Nauhoita">
-          <IndexRoute component={RecordIndex} />
+          <IndexRoute component={RecordStart} />
           <Route path="/record/start" component={RecordStart} />
           <Route path="/record/active" component={RecordActive} />
           <Route path="/record/ended" component={RecordEnded} />

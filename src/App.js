@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import NavLink from './components/NavLink';
-import navIconGraph from './images/icons/icon-tab-graph.svg';
-import RecordIndex from './components/record/RecordIndex';
+import tabIconWhistle from './images/icons/icon-tab-whistle.svg';
+import tabIconPuck from './images/icons/icon-tab-puck.svg';
+import tabIconSticks from './images/icons/icon-tab-sticks.svg';
+import tabIconShirt from './images/icons/icon-tab-shirt.svg';
+import tabIconHelmet from './images/icons/icon-tab-helmet.svg';
+import CoachIndex from './components/coach/CoachIndex';
 
 class App extends Component {
   renderTitle() {
@@ -26,14 +30,15 @@ class App extends Component {
         </div>
 
         <div className="flex vertical grow">
-          {this.props.children || <RecordIndex/>}
+          {this.props.children || <CoachIndex/>}
         </div>
 
         <div className="tab-bar">
-          <NavLink to="/record" icon={navIconGraph} label="Nauhoita" />
-          <NavLink to="/games" icon={navIconGraph} label="Pelit" />
-          <NavLink to="/teams" icon={navIconGraph} label="Joukkueet" />
-          <NavLink to="/players" icon={navIconGraph} label="Pelaajat" />
+          <NavLink to="/coach" icon={tabIconWhistle} label="Valmennus" />
+          <NavLink to="/games" icon={tabIconPuck} label="Pelit" />
+          <NavLink to="/record" icon={tabIconSticks} label="Uusi peli" />
+          <NavLink to="/teams" icon={tabIconShirt} label="Joukkueet" />
+          <NavLink to="/players" icon={tabIconHelmet} label="Pelaajat" />
         </div>
       </div>
     );
