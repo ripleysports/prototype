@@ -246,7 +246,7 @@
 // Sizes
 .button {
   &--small {
-    padding: 0.125rem 0.25rem;
+    padding: 0.25rem 0.5rem;
 
     line-height: 0.75rem;
     font-size: font-size(0-75);
@@ -256,7 +256,7 @@
     }
   }
   &--medium {
-    padding: 0.375rem 0.75rem;
+    padding: 0.75rem 1rem;
 
     line-height: 1.25rem;
     font-size: font-size(1-25);
@@ -266,7 +266,7 @@
     }
   }
   &--large {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.25rem;
 
     line-height: 1.5rem;
     font-size: font-size(1-5);

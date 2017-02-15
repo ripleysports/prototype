@@ -10,20 +10,37 @@ class RecordStart extends Component {
     super(props);
     this.state = {
       selectedTeams: [1, 2],
+      selectedHash: {}
     };
   }
   componentWillMount() {
     this.setState({teams: this.getTeams(this.state.selectedTeams)});
+  }
+  componentDidMount() {
+    this.setTeams(this.state.selectedTeams);
   }
   onChange(value) {
     const oldSelected = this.state.selectedTeams;
     const newSelected = update(oldSelected, {$set: value} );
     const oldTeams = this.state.teams;
     const newTeams = update(oldTeams, {$set: this.getTeams(newSelected)} );
+    this.setTeams(newSelected);
     this.setState({
       teams: newTeams,
       selectedTeams: newSelected
     });
+  }
+  setTeams(selected) {
+    const homeTeam = _.find(data.teams, (team) => team.id === selected[0]);
+    const awayTeam = _.find(data.teams, (team) => team.id === selected[1]);
+
+    const teams = {
+      "home": homeTeam["name"],
+      "away": awayTeam["name"]
+    }
+    this.setState({
+      selectedHash: teams
+    })
   }
   getTeams(selectedTeams) {
     const teamOptions = data.teams.map(team => {
@@ -33,8 +50,8 @@ class RecordStart extends Component {
       }
     });
 
-    const homeTeam = teamOptions.filter((option) => option.value != selectedTeams[1])
-    const awayTeam = teamOptions.filter((option) => option.value != selectedTeams[0])
+    const homeTeam = teamOptions.filter((option) => option.value !== selectedTeams[1])
+    const awayTeam = teamOptions.filter((option) => option.value !== selectedTeams[0])
 
     const teamsList = [
       {
@@ -67,7 +84,7 @@ class RecordStart extends Component {
           </MultiPicker>
         </div>
         <div className="padding-1 text-align-center">
-          <Link to={`/record/active`} className="button button--round">
+          <Link to={{pathname: "/record/active", state: this.state.selectedHash}} className="button button--round">
             Aloita nauhoitus
           </Link>
         </div>
