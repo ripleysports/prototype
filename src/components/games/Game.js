@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../../data/data.json';
 import { Link } from 'react-router';
+import Slider from 'rc-slider';
 import _ from 'lodash';
 import Isvg from 'react-inlinesvg';
 import rink from '../../images/rink.svg';
@@ -11,7 +12,8 @@ class Game extends Component {
     this.state = {
       game: this.setGame(),
       teams: this.setTeams(),
-      players: this.setPlayers()
+      players: this.setPlayers(),
+      moments: this.setMoments()
     }
   }
   setGame() {
@@ -38,6 +40,11 @@ class Game extends Component {
     }
     return teams;
   }
+  setMoments() {
+    const game = this.setGame();
+    const moments = _.filter(data.moments, (moment) => _.includes(game.moments, moment.id));
+    return moments;
+  }
   renderTeamAttribute(team, key) {
     if (this.state.teams[team][key]) {
       return this.state.teams[team][key];
@@ -47,31 +54,51 @@ class Game extends Component {
     const players = this.state.players[team];
     return players.map(player => {
       return (
-          <Link to={`/players/${player.slug}`} key={player.id} className="block padding-0-25 size-0-75 padding-y border-color-gray-lighten-3 color-primary">
+          <Link to={`/players/${player.slug}`} key={player.id} className="block padding-0-5 size-0-75 padding-y border-color-primary-lighten-1">
             {player.firstName} {player.lastName}
           </Link>)
     });
   }
+  renderMoments() {
+    const moments = this.state.moments;
+    return moments.map(moment => {
+      return (
+          <li className="padding-0-5 border-color-primary-lighten-1">
+          {moment.time}
+          </li>
+        )
+    });
+  }
   render() {
     return (
-      <div>
-        <div className="padding-1 padding-bottom-0">
-          <Isvg src={rink} className=""> </Isvg>
+      <div className="grow flex vertical">
+        <div className="flex justify align-center padding-0-5 bg-primary-darken-1">
+          <div className="size-1 text-align-center grow">
+            {this.renderTeamAttribute("home", "name")}
+          </div>
+          <div className=" padding-1 padding-x size-1-25 bold">
+            {this.state.game.homeScore} - {this.state.game.awayScore}
+          </div>
+          <div className="size-1 text-align-center grow">
+            {this.renderTeamAttribute("away", "name")}
+          </div>
         </div>
-        <div className="padding-1">
-          <div className="flex text-align-center margin-1 margin-bottom align-center">
-            <h1 className="bold grow size-1-25">{this.renderTeamAttribute("home", "name")}</h1>
-            <h1 className="bold size-2">{this.state.game.homeScore} - {this.state.game.awayScore}</h1>
-            <h1 className="bold grow size-1-25">{this.renderTeamAttribute("away", "name")}</h1>
+        <div className="game-replay">
+          <div className="flex">
+            <div className="game-replay__moments">
+              <ul className="child-borders-y">
+                {this.renderMoments()}
+              </ul>
+            </div>
+            <div className="game-replay__player">
+              <Isvg src={rink} className="stroke-white fill-transparent rink"> </Isvg>
+            </div>
           </div>
-          <div className="flex even-children">
-            <ul className="child-borders-y margin-1 margin-right">
-              {this.renderPlayers("home")}
-            </ul>
-            <ul className="child-borders-y">
-              {this.renderPlayers("home")}
-            </ul>
+          <div className="game-replay__controls">
+            <Slider min={0} max={20} defaultValue={3} />
           </div>
+        </div>
+        <div className="grow bg-primary-darken-1">
         </div>
       </div>
     );

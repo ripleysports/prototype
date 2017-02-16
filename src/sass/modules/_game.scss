@@ -42,3 +42,20 @@
     z-index: 800;
   }
 }
+
+
+.game-replay {
+  .game-replay__moments {
+    min-width: 30%;
+    background-color: color(primary, darken-2);
+  }
+  .game-replay__player {
+    @include flex-basis(auto);
+    @include flex-grow(1);
+    padding: 1rem;
+  }
+  .game-replay__controls {
+    padding: 1rem;
+   background-color: color(primary, darken-1);
+  }
+}
