@@ -27,7 +27,7 @@ class Player extends Component {
       const awayTeam = _.find(data.teams, (team) => team.id === game.away);
       const moment = _.find(data.moments, (moment) => moment.id === game.playerMoment);
       return (
-        <Link to={`/games/${game.slug}`} key={game.id} className="block padding-0-5 size-0-75 padding-y border-color-primary-lighten-1 color-white">
+        <Link to={`/games/${game.slug}`} key={moment.id} className="block padding-0-5 size-0-75 padding-y border-color-primary-lighten-1 color-white">
           <div className="flex align-center">
             <div className="grow margin-0-5 margin-right">
               {homeTeam.name} vs {awayTeam.name}
@@ -55,19 +55,19 @@ class Player extends Component {
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Ottelut</h4>
-            <div classname="size-1">{this.state.player.matches}</div>
+            <div className="size-1">{this.state.player.matches}</div>
           </div>
         </li>
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Maalit</h4>
-            <div classname="size-1">{this.state.player.goals}</div>
+            <div className="size-1">{this.state.player.goals}</div>
           </div>
         </li>
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Peliaika</h4>
-            <div classname="size-1">{this.state.player.playTime}</div>
+            <div className="size-1">{this.state.player.playTime}</div>
           </div>
         </li>
       </ul>

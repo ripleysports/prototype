@@ -53,7 +53,7 @@ class RecordTeams extends Component {
     }
   }
   onClickMoment() {
-
+    console.log("Momentti tallennettu")
   }
   render() {
     return (
@@ -82,7 +82,7 @@ class RecordTeams extends Component {
             {this.renderTimer()}
           </div>
           <div>
-            <span className="button button--round" oncClick={this.onClickMoment.bind(this)}>Tallenna momentti</span>
+            <span className="button button--round" onClick={this.onClickMoment.bind(this)}>Tallenna momentti</span>
           </div>
         </div>
       </div>

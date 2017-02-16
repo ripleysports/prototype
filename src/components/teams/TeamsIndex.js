@@ -9,7 +9,7 @@ class TeamsIndex extends Component {
         <div className="padding-1">
           <ul className="card-grid">
             {data.teams.map(team =>
-              <div className="card-grid__item">
+              <div key={team.id} className="card-grid__item">
                 <Link to={`/teams/${team.slug}`} key={team.id} className="card">
                   <div className="card__content align-end">
                     <div className="bg-white padding-0-5">

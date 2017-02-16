@@ -63,7 +63,7 @@ class Game extends Component {
     const moments = this.state.moments;
     return moments.map(moment => {
       return (
-          <li className="padding-0-5 border-color-primary-lighten-1">
+          <li key={moment.id} className="padding-0-5 border-color-primary-lighten-1">
           {moment.time}
           </li>
         )

@@ -47,37 +47,37 @@ class Team extends Component {
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Ottelut</h4>
-            <div classname="size-1">{this.state.team.matches}</div>
+            <div className="size-1">{this.state.team.matches}</div>
           </div>
         </li>
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Maalit</h4>
-            <div classname="size-1">{this.state.team.goals}</div>
+            <div className="size-1">{this.state.team.goals}</div>
           </div>
         </li>
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Päästetyt maalit</h4>
-            <div classname="size-1">{this.state.team.goalsAgainst}</div>
+            <div className="size-1">{this.state.team.goalsAgainst}</div>
           </div>
         </li>
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Voitot</h4>
-            <div classname="size-1">{this.state.team.wins}</div>
+            <div className="size-1">{this.state.team.wins}</div>
           </div>
         </li>
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Tasapelit</h4>
-            <div classname="size-1">{this.state.team.ties}</div>
+            <div className="size-1">{this.state.team.ties}</div>
           </div>
         </li>
         <li className="card-grid__item">
           <div className="">
             <h4 className="size-0-75 margin-0-25 margin-bottom">Häviöt</h4>
-            <div classname="size-1">{this.state.team.lost}</div>
+            <div className="size-1">{this.state.team.lost}</div>
           </div>
         </li>
       </ul>
