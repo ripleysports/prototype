@@ -191,11 +191,15 @@ class RecordTeams extends Component {
             {this.renderTeams("away")}
           </div>
         </div>
-        <div className="padding-1 text-align-center">
-          <div className="rink-container" style={{width: this.state.rinkWidth, margin: "auto", position: "relative"}}>
-            {this.renderGame()}
-            <Isvg src={rink} className="stroke-white fill-transparent rink"> </Isvg>
+        <div className="flex">
+          <div className="padding-1" style={{position: "absolute"}}>
+            <div className="rink-container" style={{height: this.state.rinkHeight, width: this.state.rinkWidth, margin: "auto", position: "relative"}}>
+              {this.renderGame()}
+            </div>
           </div>
+        </div>
+        <div className="padding-1 text-align-center">
+          <Isvg src={rink} className="stroke-white fill-transparent rink"> </Isvg>
         </div>
         <div className="flex align-center padding-1 justify">
           <div>
