@@ -11,7 +11,8 @@ class RecordTeams extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      duration: 0
+      duration: 0,
+      momentActive: false
     };
   }
   componentDidMount() {
@@ -53,9 +54,25 @@ class RecordTeams extends Component {
     }
   }
   onClickMoment() {
-    console.log("Momentti tallennettu")
+    this.setState({momentActive: true});
+    setTimeout(() => {
+      this.setState({momentActive: false});
+    }, 1500);
+  }
+  renderMomentButtonTooltip() {
+    if (this.state.momentActive) {
+      return (
+        <div className="moment-button__tooltip size-0-75">
+          Momentti tallennettu
+        </div>
+      )
+    }
   }
   render() {
+    let momentActiveClass = "";
+    if (this.state.momentActive) {
+      momentActiveClass = "moment-button--active";
+    }
     return (
       <div className="flex vertical grow">
         <div className="flex justify align-center padding-0-5 bg-primary-darken-1">
@@ -75,14 +92,15 @@ class RecordTeams extends Component {
         <div className="flex align-center padding-1 justify">
           <div>
             <Link to={`/record/ended`} className="button button--round button--red button--ghost">
-                Lopeta nauhoitus
+              Lopeta nauhoitus
             </Link>
           </div>
           <div className="size-1-25 bold">
             {this.renderTimer()}
           </div>
-          <div>
-            <span className="button button--round" onClick={this.onClickMoment.bind(this)}>Tallenna momentti</span>
+          <div className={`moment-button ${momentActiveClass}`}>
+            {this.renderMomentButtonTooltip()}
+            <span className={`button button--round`} onClick={this.onClickMoment.bind(this)}>Tallenna momentti</span>
           </div>
         </div>
       </div>
