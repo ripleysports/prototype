@@ -40,8 +40,8 @@ class RecordTeams extends Component {
   }
   renderTimer() {
     let seconds = Math.round(this.state.duration / 1000);
-    let minutes = parseInt( seconds / 60 );
-    seconds = seconds % 60;
+    let minutes = parseInt( (seconds / 60), 10 );
+    seconds %= 60;
     return `${("00" + minutes).slice(-2)} : ${("00" + seconds).slice(-2)}`;
   }
   renderTeams(team) {

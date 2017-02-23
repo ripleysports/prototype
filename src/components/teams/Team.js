@@ -29,10 +29,6 @@ class Team extends Component {
     return games.map(game => {
         const homeTeam = _.find(data.teams, (team) => team.id === game.home);
         const awayTeam = _.find(data.teams, (team) => team.id === game.away);
-        const gameTeams = {
-          home: homeTeam,
-          away: awayTeam
-        }
         return (
           <Link to={`/games/${game.slug}`} key={game.id} className="block padding-0-5 size-0-75 padding-y border-color-primary-lighten-1 color-white">
             {homeTeam.name} vs {awayTeam.name}
@@ -84,7 +80,6 @@ class Team extends Component {
     )
   }
   render() {
-    const team = _.find(data.teams, (team) => team.slug === this.props.params.teamSlug);
     return (
       <div className="grow flex vertical">
         <div className="padding-1 text-align-center bg-primary-darken-1">
