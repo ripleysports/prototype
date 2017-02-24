@@ -54,6 +54,17 @@ class CoachGame extends Component {
       )
     }
   }
+  renderSlider() {
+    if (this.state.momentSelected) {
+      return (
+        <Slider.Range min={0} max={100} defaultValue={[30, 40]} />
+      )
+    } else {
+      return (
+        <Slider min={0} max={100} defaultValue={0} />
+      )
+    }
+  }
   renderMoments() {
     const game = _.find(data.games, (game) => game.id === 1);
     const moments = _.filter(data.moments, (moment) => _.includes(game.moments, moment.id));
@@ -101,7 +112,7 @@ class CoachGame extends Component {
               00:00
             </div>
             <div className="grow">
-              <Slider min={0} max={20} defaultValue={3} />
+              {this.renderSlider()}
             </div>
             <div className="margin-0-5 margin-left size-0-75">
               67:30
