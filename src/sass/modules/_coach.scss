@@ -1,0 +1,20 @@
+.coach-view {
+  position: relative;
+  .coach-view__recordings {
+    position: relative;
+    &:after {
+      @include mq(m) {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 1rem;
+        bottom: 1rem;
+        right: 0;
+
+        width: 1px;
+
+        background-color: color(primary, lighten-1);
+      }
+    }
+  }
+}

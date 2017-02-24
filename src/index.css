@@ -2476,6 +2476,102 @@ body {
   .card__content > div {
     width: 100%; }
 
+.moment-button--active {
+  position: relative; }
+  .moment-button--active .button {
+    -webkit-animation: glow 1.5s cubic-bezier(0.236, 0, 0.236, 1);
+    -moz-animation: glow 1.5s cubic-bezier(0.236, 0, 0.236, 1);
+    animation: glow 1.5s cubic-bezier(0.236, 0, 0.236, 1); }
+
+.moment-button__tooltip {
+  position: absolute;
+  top: -1.75rem;
+  left: 50%;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.125rem;
+  color: #583fd5;
+  white-space: nowrap;
+  background-color: white;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .moment-button__tooltip:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 0;
+    width: 0;
+    border: solid transparent;
+    border-top-color: white;
+    border-width: 10px;
+    margin-left: -10px;
+    pointer-events: none; }
+
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
+@-moz-keyframes glow {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
+.new-recording {
+  position: relative;
+  background-color: #583fd5;
+  z-index: 1000;
+  -webkit-animation: glow 2s cubic-bezier(0.236, 0, 0.236, 1);
+  -moz-animation: glow 2s cubic-bezier(0.236, 0, 0.236, 1);
+  animation: glow 2s cubic-bezier(0.236, 0, 0.236, 1); }
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
+@-moz-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
 .rc-slider {
   position: relative;
   height: 14px;
@@ -2965,6 +3061,21 @@ body {
 @media screen and (min-width: 1420px) {
   .card-grid--narrow .card-grid__item {
     width: 33.333%; } }
+
+.coach-view {
+  position: relative; }
+  .coach-view .coach-view__recordings {
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .coach-view .coach-view__recordings:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 1rem;
+        bottom: 1rem;
+        right: 0;
+        width: 1px;
+        background-color: #34404c; } }
 
 #root {
   position: absolute;

@@ -7,6 +7,8 @@
       "awayScore": 2,
       "home": 1,
       "away": 2,
+      "time": "67:00",
+      "date": "15.2",
       "moments": [1,2,3]
     },
     {
@@ -16,6 +18,8 @@
       "awayScore": 2,
       "home": 1,
       "away": 4,
+      "time": "36:15",
+      "date": "5.2",
       "moments": [4,5,6]
     },
     {
@@ -25,6 +29,8 @@
       "awayScore": 1,
       "home": 5,
       "away": 6,
+      "time": "58:20",
+      "date": "5.2",
       "moments": [7,8,9]
     },
     {
@@ -34,6 +40,8 @@
       "awayScore": 0,
       "home": 3,
       "away": 7,
+      "time": "48:10",
+      "date": "20.1",
       "moments": [10,11,12]
     }
   ],

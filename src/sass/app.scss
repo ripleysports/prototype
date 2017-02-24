@@ -20,11 +20,14 @@
 // Components
 @import "components/button";
 @import "components/card";
+@import "components/moment-button";
+@import "components/new-recording";
 @import "components/rc-slider";
 @import "components/rmc-picker";
 
 // Modules
 @import "modules/card-grid";
+@import "modules/coach";
 @import "modules/frame";
 @import "modules/game";
 @import "modules/rink";
