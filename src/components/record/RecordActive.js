@@ -75,7 +75,7 @@ class RecordTeams extends Component {
       playerIntervals.push(setInterval(this.runPlayer.bind(this, i), 100))
     }
 
-    this.playersIntervals = playerIntervals
+    this.playerIntervals = playerIntervals
   }
 
   startTimer() {
@@ -133,8 +133,8 @@ class RecordTeams extends Component {
     clearInterval(this.timerInterval);
   }
   stopGame() {
-    clearInterval(this.puckInterval);
-    clearInterval(this.playersInterval);
+    this.puckInterval && clearInterval(this.puckInterval)
+    this.playerIntervals && this.playerIntervals.forEach((interval) => clearInterval(interval))
   }
   renderTimer() {
     let seconds = Math.round(this.state.duration / 1000);
@@ -192,7 +192,7 @@ class RecordTeams extends Component {
           </div>
         </div>
         <div className="flex">
-          <div className="padding-1" style={{position: "width: 100%; absolute"}}>
+          <div className="padding-1" style={{width: "100%", position: "absolute"}}>
             <div className="rink-container" style={{height: this.state.rinkHeight, width: this.state.rinkWidth, margin: "auto", position: "relative"}}>
               {this.renderGame()}
             </div>
