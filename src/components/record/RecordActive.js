@@ -192,7 +192,7 @@ class RecordTeams extends Component {
           </div>
         </div>
         <div className="flex">
-          <div className="padding-1" style={{position: "absolute"}}>
+          <div className="padding-1" style={{position: "width: 100%; absolute"}}>
             <div className="rink-container" style={{height: this.state.rinkHeight, width: this.state.rinkWidth, margin: "auto", position: "relative"}}>
               {this.renderGame()}
             </div>
