@@ -1,0 +1,48 @@
+.chat {
+  padding: 1rem;
+}
+.chat__bubble {
+  position: relative;
+  padding: 0.75rem 1rem;
+  border-radius: 0.125rem;
+
+  color: color(secondary);
+
+  background: color(white);
+}
+.chat__bubble:after, .chat__bubble:before {
+  right: 2rem;
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.chat__bubble:after {
+  border-color: transparent;
+  border-top-color: color(white);
+  border-width: 10px;
+}
+.chat__bubble--reply {
+  color: color(primary);
+  &:after {
+    right: auto;
+    left: 1rem;
+  }
+}
+
+.chat__input {
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid color(primary, darken-4);
+    @extend .size-1;
+    color: color(primary, darken-4);
+    background: color(primary, lighten-5);
+  }
+  button {
+  }
+}

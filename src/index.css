@@ -2140,7 +2140,7 @@ body {
   line-height: 0.75rem;
   font-size: 0.55rem; }
 
-.size-1 {
+.size-1, .chat__input input {
   line-height: 1rem;
   font-size: 0.7rem; }
 
@@ -3064,6 +3064,44 @@ body {
 @media screen and (min-width: 1420px) {
   .card-grid--narrow .card-grid__item {
     width: 33.333%; } }
+
+.chat {
+  padding: 1rem; }
+
+.chat__bubble {
+  position: relative;
+  padding: 0.75rem 1rem;
+  border-radius: 0.125rem;
+  color: #583fd5;
+  background: white; }
+
+.chat__bubble:after, .chat__bubble:before {
+  right: 2rem;
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.chat__bubble:after {
+  border-color: transparent;
+  border-top-color: white;
+  border-width: 10px; }
+
+.chat__bubble--reply {
+  color: #151a1e; }
+  .chat__bubble--reply:after {
+    right: auto;
+    left: 1rem; }
+
+.chat__input input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #040506;
+  color: #040506;
+  background: #f0f2f5; }
 
 .coach-view {
   position: relative; }
