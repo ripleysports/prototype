@@ -2537,6 +2537,41 @@ body {
   100% {
     box-shadow: 0 0 0 #9586e4; } }
 
+.new-recording {
+  position: relative;
+  background-color: #583fd5;
+  z-index: 1000;
+  -webkit-animation: glow 2s cubic-bezier(0.236, 0, 0.236, 1);
+  -moz-animation: glow 2s cubic-bezier(0.236, 0, 0.236, 1);
+  animation: glow 2s cubic-bezier(0.236, 0, 0.236, 1); }
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
+@-moz-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #9586e4; }
+  50% {
+    box-shadow: 0 0 40px #9586e4;
+    background-color: #7560dc; }
+  100% {
+    box-shadow: 0 0 0 #9586e4; } }
+
 .rc-slider {
   position: relative;
   height: 14px;
@@ -3029,15 +3064,6 @@ body {
 
 .coach-view {
   position: relative; }
-  .coach-view:after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 1rem;
-    left: 1rem;
-    height: 1px;
-    background-color: #34404c; }
   .coach-view .coach-view__recordings {
     position: relative; }
     @media screen and (min-width: 768px) {

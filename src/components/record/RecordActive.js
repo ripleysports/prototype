@@ -91,7 +91,7 @@ class RecordTeams extends Component {
         </div>
         <div className="flex align-center padding-1 justify">
           <div>
-            <Link to={`/coach`} className="button button--round button--red button--ghost">
+            <Link to={{ pathname: `/coach`, state: {newRecording: true, duration: this.state.duration}}} className="button button--round button--red button--ghost">
               Lopeta nauhoitus
             </Link>
           </div>

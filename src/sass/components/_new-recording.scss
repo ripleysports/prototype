@@ -1,0 +1,19 @@
+.new-recording {
+  position: relative;
+  background-color: color(secondary);
+  z-index: 1000;
+  @include animation(glow 2s $animation-easing);
+}
+
+@include keyframes(pulse) {
+  0% {
+    box-shadow: 0 0 0 color(secondary, lighten-2);
+  }
+  50% {
+    box-shadow: 0 0 40px color(secondary, lighten-2);
+    background-color: color(secondary, lighten-1);
+  }
+  100% {
+    box-shadow: 0 0 0 color(secondary, lighten-2);
+  }
+}
