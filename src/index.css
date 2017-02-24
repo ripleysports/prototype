@@ -1865,6 +1865,9 @@ body {
     max-width: none;
     margin: auto; }
 
+.pointer {
+  cursor: pointer; }
+
 .child-margins-x-0-125 > * + * {
   margin-left: 0.125rem; }
 
