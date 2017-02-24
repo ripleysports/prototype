@@ -30,6 +30,23 @@ class CoachGame extends Component {
   saveMoment() {
    this.setState({momentSelected: false})
   }
+  renderPlayers() {
+    return (
+      <div>
+        <div className="width-0-5 height-0-5 round absolute bg-green" style={{top: "50%", left: "50%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-green" style={{top: "10%", left: "30%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-green" style={{top: "30%", left: "40%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-green" style={{top: "80%", left: "28%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-green" style={{top: "50%", left: "65%"}}></div>
+
+        <div className="width-0-5 height-0-5 round absolute bg-red" style={{top: "20%", left: "50%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-red" style={{top: "10%", left: "70%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-red" style={{top: "90%", left: "60%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-red" style={{top: "60%", left: "40%"}}></div>
+        <div className="width-0-5 height-0-5 round absolute bg-red" style={{top: "15%", left: "30%"}}></div>
+      </div>
+    )
+  }
   renderRink() {
     if (this.state.momentSelected) {
       return (
@@ -40,15 +57,19 @@ class CoachGame extends Component {
               <span className="button button--small button--ghost button--white">Kaikki</span>
             </div>
           </div>
-          <Isvg src={rink} className="stroke-white fill-transparent rink"> </Isvg>
-          <div className="margin-0-5 margin-top text-align-center padding-0-5 bg-primary-darken-2">
-            <span className="button button--green button--small" onClick={this.saveMoment.bind(this)}>Tallenna momentti</span>
+          <div className="relative">
+            {this.renderPlayers()}
+            <Isvg src={rink} className="stroke-white fill-transparent rink"> </Isvg>
+          </div>
+          <div className="margin-0-5 margin-top text-align-center padding-0-5">
+            <span className="button button--green button--small pointer" onClick={this.saveMoment.bind(this)}>Tallenna momentti</span>
           </div>
         </div>
       )
     } else {
       return (
-        <div className="game-replay__player">
+        <div className="game-replay__player relative">
+          {this.renderPlayers()}
           <Isvg src={rink} className="stroke-white fill-transparent rink"> </Isvg>
         </div>
       )
@@ -85,7 +106,7 @@ class CoachGame extends Component {
               </div>
             </div>
             <Link to={`/coach/moment`} className="button button--small">
-              Lähetä kommentti
+              Kommentoi pelaajille
             </Link>
           </li>
         )

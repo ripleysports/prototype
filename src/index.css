@@ -1741,6 +1741,12 @@ body {
 .round {
   border-radius: 50%; }
 
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
+
 .table {
   display: table; }
 
