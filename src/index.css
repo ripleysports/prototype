@@ -3027,6 +3027,30 @@ body {
   .card-grid--narrow .card-grid__item {
     width: 33.333%; } }
 
+.coach-view {
+  position: relative; }
+  .coach-view:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    left: 1rem;
+    height: 1px;
+    background-color: #34404c; }
+  .coach-view .coach-view__recordings {
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .coach-view .coach-view__recordings:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 1rem;
+        bottom: 1rem;
+        right: 0;
+        width: 1px;
+        background-color: #34404c; } }
+
 #root {
   position: absolute;
   top: 0;
