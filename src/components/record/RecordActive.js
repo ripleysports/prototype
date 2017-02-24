@@ -49,9 +49,9 @@ class RecordTeams extends Component {
     for (let i = 0, l = 10; i < l; i++) {
       let color;
       if (i > 5) {
-        color = "green";
+        color = "#00d192";
       } else {
-        color = "red";
+        color = "#ff4747";
       }
 
       players.push({color: color, x: 50, y: 50})
